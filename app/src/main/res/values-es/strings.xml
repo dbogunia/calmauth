@@ -6,23 +6,14 @@
     <string name="onboardingPinHint">El PIN es opcional. Protege el acceso local a tus tokens en este dispositivo. Puedes activarlo cuando quieras en Ajustes.</string>
     <string name="continueWithoutPin">Continuar sin PIN</string>
     <string name="protectWithPin">Proteger la app con PIN</string>
-    <string name="begin">Empezar</string>
-    <string name="secureTagline">Seguro. Discreto. Minimalista a propósito.</string>
 
-    <string name="twofaTitle">Tus cuentas 2FA</string>
-    <string name="twofaSubtitle">Tus entradas del autenticador se cargan de forma segura desde el almacenamiento cifrado local.</string>
-    <string name="add2fa">Añadir 2FA</string>
     <string name="loadingAccounts">Cargando cuentas 2FA…</string>
     <string name="emptyAccounts">Aún no hay cuentas 2FA. Pulsa Añadir 2FA para crear la primera.</string>
 
     <string name="add2faTitle">Añadir nueva 2FA</string>
-    <string name="add2faSubtitle">Añade los datos del autenticador para tener todos los códigos de un solo uso en un lugar seguro.</string>
     <string name="serviceName">Nombre del servicio</string>
-    <string name="servicePlaceholder">p. ej. GitHub</string>
     <string name="account">Cuenta</string>
-    <string name="accountPlaceholder">p. ej. dominik.dev</string>
     <string name="secretKey">Clave secreta</string>
-    <string name="secretPlaceholder">Pega la clave de configuración</string>
     <string name="save2fa">Guardar 2FA</string>
     <string name="cancel">Cancelar</string>
     <string name="missingFieldsTitle">Faltan datos</string>
@@ -30,27 +21,18 @@
 
     <string name="qrTitle">Escanear código QR 2FA</string>
     <string name="qrSubtitle">Apunta la cámara al código QR de la pantalla de configuración del servicio.</string>
-    <string name="qrPermissionRequired">Se necesita permiso de cámara para escanear códigos QR 2FA.</string>
-    <string name="enableCamera">Activar cámara</string>
     <string name="invalidQrTitle">QR no válido</string>
     <string name="invalidQrMessage">Este código QR no es un código de configuración 2FA válido.</string>
     <string name="qrAddedTitle">2FA añadida</string>
     <string name="qrAddedMessage">La cuenta se ha añadido desde el código QR.</string>
     <string name="addManually">Añadir manualmente</string>
 
-    <string name="delete">Eliminar</string>
     <string name="deleteTokenTitle">¿Eliminar token?</string>
     <string name="deleteTokenMessage">Este token 2FA se eliminará permanentemente del dispositivo.</string>
     <string name="confirmDelete">Eliminar token</string>
 
-    <string name="pinSetupSubtitle">Establece un PIN de 4 dígitos para configurar el acceso a la app y proteger tus tokens.</string>
-    <string name="pinSetupSubtitleOptional">Crea un PIN de 4 dígitos para proteger el acceso a tus tokens en este dispositivo.</string>
-    <string name="pinVerifyDisableSubtitle">Introduce tu PIN para desactivar la protección por PIN.</string>
     <string name="pinProtectionDisabledMessage">La protección por PIN está desactivada.</string>
     <string name="pinUnlockTitle">Desbloquear QuietAuth</string>
-    <string name="pinUnlockSubtitle">Introduce tu PIN para acceder a tus tokens.</string>
-    <string name="pinCodePlaceholder">Introduce 4 dígitos</string>
-    <string name="pinConfirmPlaceholder">Vuelve a introducir el PIN</string>
     <string name="pinInvalidTitle">PIN no válido</string>
     <string name="pinInvalidMessage">El PIN debe tener exactamente 4 dígitos.</string>
     <string name="pinMismatchTitle">Los PIN no coinciden</string>
@@ -64,11 +46,7 @@
     <string name="biometricUnlockFailedMessage">Falló la verificación biométrica. Puedes desbloquear con el PIN.</string>
     <string name="unlockingApp">Verificando acceso…</string>
 
-    <string name="settingsCta">Ajustes</string>
-    <string name="settingsTitle">Ajustes</string>
-    <string name="settingsHubSubtitle">Seguridad, copias de seguridad y acciones avanzadas para datos locales.</string>
     <string name="settingsSecurityTitle">Seguridad</string>
-    <string name="settingsSecuritySubtitle">El PIN y la biometría opcional determinan quién puede abrir la app en este dispositivo.</string>
     <string name="settingsBackupTitle">Copia de seguridad</string>
     <string name="settingsBackupSubtitle">Exporta y restaura entradas como archivo CSV. Si la protección por PIN está activa, desbloquea primero la app para las copias de seguridad. El archivo no está cifrado: mantenlo privado.</string>
     <string name="settingsBack">Volver</string>
@@ -84,24 +62,17 @@
     <string name="createBackup">Exportar copia CSV</string>
     <string name="restoreBackup">Restaurar desde CSV</string>
     <string name="backupCreatedTitle">Copia creada</string>
-    <string name="saveBackupDialogTitle">Elige dónde guardar la copia</string>
     <string name="backupErrorTitle">Error en la copia</string>
     <string name="backupErrorMessage">No se pudo crear el archivo de copia.</string>
-    <string name="backupSessionExpiredMessage">Sesión expirada. Desbloquea la app con tu PIN e inténtalo de nuevo.</string>
     <string name="restoreSuccessTitle">Restauración completada</string>
-    <string name="restoreErrorTitle">Error al restaurar</string>
     <string name="restoreErrorMessage">No se pudieron restaurar los datos. Comprueba que el archivo sea una copia CSV de QuietAuth.</string>
     <string name="creatingBackupProgress">Creando copia…</string>
     <string name="restoringBackupProgress">Restaurando…</string>
     <string name="backupProcessingHint">Tras elegir la acción, el proceso continúa en otra pantalla.</string>
 
     <string name="tokenNotFound">Token no encontrado.</string>
-    <string name="backToTokens">Volver a tokens</string>
-    <string name="tokenCode">Código</string>
-    <string name="codeExpiresIn">Caduca en</string>
 
     <string name="dangerZoneTitle">Zona de peligro</string>
-    <string name="dangerZoneSubtitle">Zona de riesgo para el estado local de la app. Solo para pruebas.</string>
     <string name="developerResetStorage">Restablecer todo el almacenamiento</string>
     <string name="developerRemovePin">Quitar PIN</string>
     <string name="developerRemoveBiometrics">Quitar biometría</string>
@@ -113,9 +84,5 @@
     <string name="developerRemoveBiometricsConfirmMessage">Se desactivará el desbloqueo biométrico para esta app.</string>
     <string name="developerConfirmAction">Confirmar</string>
     <string name="developerActionSuccessTitle">Hecho</string>
-    <string name="developerActionErrorTitle">Acción fallida</string>
-    <string name="developerActionErrorMessage">No se pudo completar la acción. Inténtalo de nuevo.</string>
     <string name="developerResetStorageSuccessMessage">Se ha restablecido el almacenamiento de la app.</string>
-    <string name="developerRemovePinSuccessMessage">Se ha eliminado el PIN.</string>
-    <string name="developerRemoveBiometricsSuccessMessage">Se ha quitado el desbloqueo biométrico.</string>
 </resources>

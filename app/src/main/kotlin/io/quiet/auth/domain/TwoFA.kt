@@ -40,10 +40,32 @@ data class NormalizedTwoFA(
     val algorithm: OtpAlgorithm,
 )
 
+private val NON_BASE32_CHARS = Regex("[^A-Z2-7]")
+private val TRAILING_BASE32_PADDING = Regex("=+$")
+
+/**
+ * Normalizes a manual secret or otpauth URI into a canonical Base32 secret string.
+ * Returns an empty string when the input cannot yield a valid secret.
+ */
+fun normalizeSecretInput(raw: String): String {
+    val trimmed = raw.trim()
+    if (trimmed.startsWith("otpauth://", ignoreCase = true)) {
+        val parsed = parseOtpAuthUri(trimmed) ?: return ""
+        return sanitizeBase32Secret(parsed.secret)
+    }
+    return sanitizeBase32Secret(trimmed)
+}
+
+private fun sanitizeBase32Secret(raw: String): String =
+    raw.replace("\\s".toRegex(), "")
+        .uppercase()
+        .replace(NON_BASE32_CHARS, "")
+        .replace(TRAILING_BASE32_PADDING, "")
+
 fun normalizeTwoFAInput(input: AddTwoFAInput): NormalizedTwoFA = NormalizedTwoFA(
     name = input.name.trim(),
     account = input.account.trim(),
-    secret = input.secret.replace("\\s".toRegex(), "").uppercase(),
+    secret = normalizeSecretInput(input.secret),
     digits = if (input.digits == 8) 8 else 6,
     period = input.period?.takeIf { it > 0 } ?: 30,
     algorithm = input.algorithm ?: OtpAlgorithm.SHA1,

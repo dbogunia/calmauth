@@ -1,12 +1,19 @@
 package io.quiet.auth.ui.screens
 
 import android.widget.Toast
-import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.PaddingValues
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
-import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.Text
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.systemBarsPadding
+import androidx.compose.foundation.layout.width
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
@@ -17,17 +24,20 @@ import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
-import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.text.style.TextAlign
-import androidx.compose.ui.unit.dp
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
+import com.mudita.mmd.components.buttons.ButtonMMD
+import com.mudita.mmd.components.text.TextMMD
+import com.mudita.mmd.components.top_app_bar.TopAppBarMMD
 import io.quiet.auth.R
-import io.quiet.auth.ui.components.PINPad
-import io.quiet.auth.ui.components.QuietBottomActions
-import io.quiet.auth.ui.components.QuietScaffold
-import io.quiet.auth.ui.components.SecondaryButton
+import io.quiet.auth.ui.BottomAction
 import io.quiet.auth.ui.nav.PinRouteMode
+import io.quiet.auth.ui.theme.Ink
+import io.quiet.auth.ui.theme.Paper
 import io.quiet.auth.ui.viewmodel.PinViewModel
 import kotlinx.coroutines.launch
 
@@ -156,76 +166,122 @@ fun PinScreen(
         }
     }
 
-    val subtitle = when {
-        verifyDisable -> stringResource(R.string.pinVerifyDisableSubtitle)
-        state.hasPin && unlockLike -> stringResource(R.string.pinUnlockSubtitle)
-        setupLike && firstPin != null -> stringResource(R.string.pinConfirmPlaceholder)
-        setupLike -> stringResource(R.string.pinSetupSubtitleOptional)
-        else -> stringResource(R.string.pinUnlockSubtitle)
+    val pinDots = buildString {
+        repeat(PIN_LENGTH) { i ->
+            append(if (i < pin.length) "●" else "○")
+            if (i < PIN_LENGTH - 1) append(' ')
+        }
     }
 
-    QuietScaffold(
-        title = stringResource(R.string.pinUnlockTitle),
-        subtitle = subtitle,
-        bottomBar = {
-            QuietBottomActions(
-                primaryLabel = stringResource(R.string.continueLabel),
-                onPrimaryClick = ::onContinue,
-                primaryEnabled = pin.length >= PIN_LENGTH,
-            )
-        },
+    Column(
+        modifier = Modifier
+            .fillMaxSize()
+            .background(Paper)
+            .systemBarsPadding(),
     ) {
-        Spacer(Modifier.height(24.dp))
-        Text(
-            text = stringResource(R.string.pinCodePlaceholder),
-            style = MaterialTheme.typography.headlineMedium.copy(fontWeight = FontWeight.SemiBold),
-            color = MaterialTheme.colorScheme.onSurface,
-            textAlign = TextAlign.Center,
-            modifier = Modifier.fillMaxWidth(),
+        TopAppBarMMD(
+            title = {
+                TextMMD(
+                    text = stringResource(R.string.pinUnlockTitle),
+                    fontSize = 24.sp,
+                    fontWeight = FontWeight.Medium,
+                    color = Ink,
+                )
+            },
+            showDivider = true,
         )
 
-        Box(
-            modifier = Modifier.fillMaxWidth().weight(1f),
-            contentAlignment = Alignment.Center,
+        Column(
+            modifier = Modifier
+                .weight(1f)
+                .fillMaxWidth()
+                .padding(24.dp),
+            horizontalAlignment = Alignment.CenterHorizontally,
+            verticalArrangement = Arrangement.Center,
         ) {
-            PINPad(
-                pinLength = pin.length,
-                onDigit = { digit -> if (pin.length < PIN_LENGTH) pin += digit },
-                onBackspace = { pin = pin.dropLast(1) },
-            )
-        }
-
-        if (
-            mode == PinRouteMode.UNLOCK &&
-            state.isPinEnabled &&
-            state.hasPin &&
-            state.isBiometricSupported
-        ) {
-            SecondaryButton(
-                text = if (biometricBusy) stringResource(R.string.unlockingApp) else stringResource(R.string.useBiometrics),
-                onClick = {
-                    if (!biometricBusy) {
-                        biometricAttempted = true
-                        biometricBusy = true
-                        scope.launch {
-                            val ok = viewModel.unlockWithBiometrics(
-                                title = context.getString(R.string.pinUnlockTitle),
-                                cancelLabel = context.getString(R.string.cancel),
-                            )
-                            biometricBusy = false
-                            if (!ok) {
-                                Toast.makeText(
-                                    context,
-                                    context.getString(R.string.biometricUnlockFailedMessage),
-                                    Toast.LENGTH_SHORT,
-                                ).show()
+            TextMMD(pinDots, fontSize = 40.sp, fontWeight = FontWeight.Medium, color = Ink)
+            Spacer(Modifier.height(32.dp))
+            listOf(
+                listOf("1", "2", "3"),
+                listOf("4", "5", "6"),
+                listOf("7", "8", "9"),
+                listOf("", "0", "⌫"),
+            ).forEach { row ->
+                Row(
+                    horizontalArrangement = Arrangement.Center,
+                    modifier = Modifier.fillMaxWidth(),
+                ) {
+                    row.forEach { digit ->
+                        if (digit.isBlank()) {
+                            Spacer(Modifier.width(72.dp))
+                        } else {
+                            ButtonMMD(
+                                onClick = {
+                                    when (digit) {
+                                        "⌫" -> pin = pin.dropLast(1)
+                                        else -> if (pin.length < PIN_LENGTH) pin += digit
+                                    }
+                                },
+                                modifier = Modifier
+                                    .padding(4.dp)
+                                    .size(64.dp),
+                                contentPadding = PaddingValues(0.dp),
+                            ) {
+                                TextMMD(digit, fontSize = 20.sp, color = Color.White)
                             }
                         }
                     }
-                },
-                enabled = !biometricBusy,
-            )
-            Spacer(Modifier.height(8.dp))
+                }
+            }
+
+            if (
+                mode == PinRouteMode.UNLOCK &&
+                state.isPinEnabled &&
+                state.hasPin &&
+                state.isBiometricSupported
+            ) {
+                Spacer(Modifier.height(16.dp))
+                ButtonMMD(
+                    onClick = {
+                        if (!biometricBusy) {
+                            biometricAttempted = true
+                            biometricBusy = true
+                            scope.launch {
+                                val ok = viewModel.unlockWithBiometrics(
+                                    title = context.getString(R.string.pinUnlockTitle),
+                                    cancelLabel = context.getString(R.string.cancel),
+                                )
+                                biometricBusy = false
+                                if (!ok) {
+                                    Toast.makeText(
+                                        context,
+                                        context.getString(R.string.biometricUnlockFailedMessage),
+                                        Toast.LENGTH_SHORT,
+                                    ).show()
+                                }
+                            }
+                        }
+                    },
+                    enabled = !biometricBusy,
+                    modifier = Modifier.fillMaxWidth(),
+                ) {
+                    TextMMD(
+                        text = if (biometricBusy) {
+                            stringResource(R.string.unlockingApp)
+                        } else {
+                            stringResource(R.string.useBiometrics)
+                        },
+                        color = Color.White,
+                        fontSize = 16.sp,
+                    )
+                }
+            }
         }
+
+        BottomAction(
+            text = stringResource(R.string.continueLabel),
+            onClick = ::onContinue,
+            enabled = pin.length >= PIN_LENGTH,
+        )
     }
 }

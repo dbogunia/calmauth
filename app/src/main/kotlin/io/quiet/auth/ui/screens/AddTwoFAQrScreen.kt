@@ -4,9 +4,8 @@ import android.Manifest
 import android.content.pm.PackageManager
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
-import androidx.compose.foundation.layout.Spacer
-import androidx.compose.foundation.layout.height
-import androidx.compose.material3.Text
+import androidx.compose.foundation.layout.PaddingValues
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
@@ -15,18 +14,17 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
-import androidx.compose.ui.unit.dp
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.unit.dp
 import androidx.core.content.ContextCompat
 import com.journeyapps.barcodescanner.ScanContract
 import com.journeyapps.barcodescanner.ScanOptions
+import com.mudita.mmd.components.lazy.LazyColumnMMD
 import io.quiet.auth.R
 import io.quiet.auth.domain.parseOtpAuthUri
+import io.quiet.auth.ui.ActionRow
+import io.quiet.auth.ui.SectionHeader
 import io.quiet.auth.ui.components.ConfirmActionSheet
-import io.quiet.auth.ui.components.PrimaryButton
-import io.quiet.auth.ui.components.QuietBottomActions
-import io.quiet.auth.ui.components.QuietScaffold
-import io.quiet.auth.ui.components.SecondaryButton
 import io.quiet.auth.ui.viewmodel.TwoFAViewModel
 
 @Composable
@@ -41,7 +39,7 @@ fun AddTwoFAQrScreen(
     var permissionGranted by remember {
         mutableStateOf(
             ContextCompat.checkSelfPermission(context, Manifest.permission.CAMERA) ==
-                PackageManager.PERMISSION_GRANTED
+                PackageManager.PERMISSION_GRANTED,
         )
     }
 
@@ -57,7 +55,7 @@ fun AddTwoFAQrScreen(
     }
 
     val permissionLauncher = rememberLauncherForActivityResult(
-        ActivityResultContracts.RequestPermission()
+        ActivityResultContracts.RequestPermission(),
     ) { granted ->
         permissionGranted = granted
         if (granted) launchScan(scanLauncher, context)
@@ -67,41 +65,29 @@ fun AddTwoFAQrScreen(
         if (permissionGranted) launchScan(scanLauncher, context)
     }
 
-    QuietScaffold(
-        title = stringResource(R.string.qrTitle),
-        subtitle = stringResource(R.string.qrSubtitle),
-        bottomBar = {
-            QuietBottomActions(
-                primaryLabel = stringResource(R.string.addManually),
-                onPrimaryClick = onAddManually,
-                secondaryLabel = stringResource(R.string.cancel),
-                onSecondaryClick = onCancel,
-            )
-        },
+    LazyColumnMMD(
+        modifier = Modifier.fillMaxSize(),
+        contentPadding = PaddingValues(horizontal = 16.dp, vertical = 16.dp),
     ) {
-
-        Spacer(Modifier.height(24.dp))
-        if (!permissionGranted) {
-            Text(
-                text = stringResource(R.string.qrPermissionRequired),
-            )
-            Spacer(Modifier.height(16.dp))
-            PrimaryButton(
-                text = stringResource(R.string.enableCamera),
-                onClick = { permissionLauncher.launch(Manifest.permission.CAMERA) },
-            )
-        } else {
-            PrimaryButton(
-                text = stringResource(R.string.qrTitle),
-                onClick = { launchScan(scanLauncher, context) },
-            )
+        item { SectionHeader(stringResource(R.string.qrTitle)) }
+        item {
+            ActionRow(stringResource(R.string.qrTitle)) {
+                if (permissionGranted) {
+                    launchScan(scanLauncher, context)
+                } else {
+                    permissionLauncher.launch(Manifest.permission.CAMERA)
+                }
+            }
         }
-
+        item { ActionRow(stringResource(R.string.addManually), onAddManually) }
+        item { ActionRow(stringResource(R.string.cancel), onCancel) }
     }
 
     if (dialogMessage != null) {
         ConfirmActionSheet(
-            title = stringResource(if (dialogMessage == R.string.qrAddedMessage) R.string.qrAddedTitle else R.string.invalidQrTitle),
+            title = stringResource(
+                if (dialogMessage == R.string.qrAddedMessage) R.string.qrAddedTitle else R.string.invalidQrTitle,
+            ),
             message = stringResource(dialogMessage!!),
             confirmLabel = "OK",
             dismissLabel = stringResource(R.string.cancel),

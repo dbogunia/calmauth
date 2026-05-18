@@ -6,23 +6,14 @@
     <string name="onboardingPinHint">El PIN és opcional. Protegeix l\'accés local als teus testimonis en aquest dispositiu. Pots activar-lo quan vulguis a Configuració.</string>
     <string name="continueWithoutPin">Continuar sense PIN</string>
     <string name="protectWithPin">Protegir l\'app amb PIN</string>
-    <string name="begin">Començar</string>
-    <string name="secureTagline">Segur. Discret. Minimalista amb intenció.</string>
 
-    <string name="twofaTitle">Els teus comptes 2FA</string>
-    <string name="twofaSubtitle">Les entrades de l\'autenticador es carreguen amb seguretat des de l\'emmagatzematge local xifrat.</string>
-    <string name="add2fa">Afegir 2FA</string>
     <string name="loadingAccounts">Carregant els comptes 2FA…</string>
     <string name="emptyAccounts">Encara no hi ha comptes 2FA. Toca Afegir 2FA per crear la primera entrada.</string>
 
     <string name="add2faTitle">Afegir nou 2FA</string>
-    <string name="add2faSubtitle">Afegeix les dades de l\'autenticador per tenir tots els codis d\'ús únic en un sol lloc segur.</string>
     <string name="serviceName">Nom del servei</string>
-    <string name="servicePlaceholder">p. ex. GitHub</string>
     <string name="account">Compte</string>
-    <string name="accountPlaceholder">p. ex. dominik.dev</string>
     <string name="secretKey">Clau secreta</string>
-    <string name="secretPlaceholder">Enganxa la clau de configuració</string>
     <string name="save2fa">Desar 2FA</string>
     <string name="cancel">Cancel·lar</string>
     <string name="missingFieldsTitle">Falten camps</string>
@@ -30,27 +21,18 @@
 
     <string name="qrTitle">Escaneja el codi QR 2FA</string>
     <string name="qrSubtitle">Apunta la càmera al codi QR de la pantalla de configuració del servei.</string>
-    <string name="qrPermissionRequired">Es necessita permís de càmera per escanejar codis QR 2FA.</string>
-    <string name="enableCamera">Activar càmera</string>
     <string name="invalidQrTitle">QR no vàlid</string>
     <string name="invalidQrMessage">Aquest codi QR no és un codi de configuració 2FA vàlid.</string>
     <string name="qrAddedTitle">2FA afegit</string>
     <string name="qrAddedMessage">El compte s\'ha afegit des del codi QR.</string>
     <string name="addManually">Afegir manualment</string>
 
-    <string name="delete">Eliminar</string>
     <string name="deleteTokenTitle">Eliminar testimoni?</string>
     <string name="deleteTokenMessage">Aquest testimoni 2FA s\'eliminarà permanentment del dispositiu.</string>
     <string name="confirmDelete">Eliminar testimoni</string>
 
-    <string name="pinSetupSubtitle">Defineix un PIN de 4 dígits per iniciar sessió a l\'app i protegir l\'accés als testimonis.</string>
-    <string name="pinSetupSubtitleOptional">Crea un PIN de 4 dígits per protegir l\'accés als testimonis en aquest dispositiu.</string>
-    <string name="pinVerifyDisableSubtitle">Introdueix el PIN per desactivar la protecció amb PIN.</string>
     <string name="pinProtectionDisabledMessage">La protecció amb PIN està desactivada.</string>
     <string name="pinUnlockTitle">Desbloqueja QuietAuth</string>
-    <string name="pinUnlockSubtitle">Introdueix el PIN per accedir als testimonis.</string>
-    <string name="pinCodePlaceholder">Introdueix 4 dígits</string>
-    <string name="pinConfirmPlaceholder">Torna a introduir el PIN</string>
     <string name="pinInvalidTitle">PIN no vàlid</string>
     <string name="pinInvalidMessage">El PIN ha de tenir exactament 4 dígits.</string>
     <string name="pinMismatchTitle">El PIN no coincideix</string>
@@ -64,11 +46,7 @@
     <string name="biometricUnlockFailedMessage">La verificació biomètrica ha fallat. Pots desbloquejar amb PIN.</string>
     <string name="unlockingApp">Verificant accés…</string>
 
-    <string name="settingsCta">Configuració</string>
-    <string name="settingsTitle">Configuració</string>
-    <string name="settingsHubSubtitle">Seguretat, còpies de seguretat i accions avançades per a dades locals.</string>
     <string name="settingsSecurityTitle">Seguretat</string>
-    <string name="settingsSecuritySubtitle">El PIN i la biometria opcional controlen qui pot obrir l\'app en aquest dispositiu.</string>
     <string name="settingsBackupTitle">Còpia de seguretat</string>
     <string name="settingsBackupSubtitle">Exporta i restaura entrades com a fitxer CSV. Si la protecció amb PIN està activa, primer desbloqueja l\'app. La còpia de seguretat no està xifrada — mantingues-la privada.</string>
     <string name="settingsBack">Enrere</string>
@@ -84,24 +62,17 @@
     <string name="createBackup">Exportar còpia CSV</string>
     <string name="restoreBackup">Restaurar des de còpia CSV</string>
     <string name="backupCreatedTitle">Còpia creada</string>
-    <string name="saveBackupDialogTitle">Trieu on desar la còpia</string>
     <string name="backupErrorTitle">La còpia ha fallat</string>
     <string name="backupErrorMessage">No s\'ha pogut crear el fitxer de còpia.</string>
-    <string name="backupSessionExpiredMessage">La sessió ha caducat. Desbloqueja l\'app amb PIN i torna-ho a provar.</string>
     <string name="restoreSuccessTitle">Restauració completa</string>
-    <string name="restoreErrorTitle">La restauració ha fallat</string>
     <string name="restoreErrorMessage">No s\'han pogut restaurar les dades. Comprova que el fitxer sigui una còpia CSV vàlida de QuietAuth.</string>
     <string name="creatingBackupProgress">Creant còpia…</string>
     <string name="restoringBackupProgress">Restaurant còpia…</string>
     <string name="backupProcessingHint">Després de triar l\'acció el procés continua en una pantalla separada.</string>
 
     <string name="tokenNotFound">No s\'ha trobat el testimoni.</string>
-    <string name="backToTokens">Tornar als testimonis</string>
-    <string name="tokenCode">Codi</string>
-    <string name="codeExpiresIn">Caduca en</string>
 
     <string name="dangerZoneTitle">Zona de perill</string>
-    <string name="dangerZoneSubtitle">Zona de perill per l\'estat local de l\'app. Només per proves.</string>
     <string name="developerResetStorage">Restablir tot l\'emmagatzematge</string>
     <string name="developerRemovePin">Eliminar PIN</string>
     <string name="developerRemoveBiometrics">Eliminar biometria</string>
@@ -113,9 +84,5 @@
     <string name="developerRemoveBiometricsConfirmMessage">Això desactiva el desbloqueig biomètric per aquesta app.</string>
     <string name="developerConfirmAction">Confirmar</string>
     <string name="developerActionSuccessTitle">Fet</string>
-    <string name="developerActionErrorTitle">Acció fallida</string>
-    <string name="developerActionErrorMessage">No s\'ha pogut completar l\'acció. Torna-ho a provar.</string>
     <string name="developerResetStorageSuccessMessage">S\'ha restablert tot l\'emmagatzematge.</string>
-    <string name="developerRemovePinSuccessMessage">S\'ha eliminat el PIN.</string>
-    <string name="developerRemoveBiometricsSuccessMessage">S\'ha eliminat el desbloqueig biomètric.</string>
 </resources>

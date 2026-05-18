@@ -1,15 +1,16 @@
 # QuietAuth (Android)
 
-A native Android **QuietAuth** — a private 2FA (TOTP) authenticator with PIN unlock, optional biometric unlock and CSV backup. Built with Kotlin, Jetpack Compose and Material 3.
+A native Android **QuietAuth** — a private 2FA (TOTP) authenticator with PIN unlock, optional biometric unlock and CSV backup. Built with Kotlin, Jetpack Compose and the [MMD](https://github.com/mudita/MMD) design system.
 
 Repository: **`quiet-auth`**. Application ID: **`io.quiet.auth`**.
 
 ## Stack
 
-- Kotlin 2.1 + Jetpack Compose (Material 3)
+- Kotlin 2.1 + Jetpack Compose
+- [MMD](https://github.com/mudita/MMD) (`com.mudita:MMD`) for UI components
 - AndroidX Navigation Compose
 - AndroidX Biometric (`BiometricPrompt`)
-- CameraX + ZXing (`zxing-android-embedded`) for QR scanning
+- ZXing (`zxing-android-embedded`) for QR scanning
 - Storage Access Framework for CSV backup import/export
 - Custom AES‑GCM wrapper backed by Android Keystore for the PIN hash and the encrypted token store (no third‑party crypto)
 
@@ -23,35 +24,28 @@ app/
     auth/        BiometricAuth (BiometricPrompt wrapper)
     session/     SessionLockController for backgrounding behaviour
     ui/
-      theme/     Material 3 theme
-      nav/       Routes + AppNav
+      theme/     ThemeMMD + QuietAuth colors
+      nav/       Routes, AppNav, MainTabHost (3 tabs)
       viewmodel/ State holders
-      screens/   Compose screens (see Routes below)
+      screens/   Compose screens
   src/test/kotlin/io/quiet/auth/domain/   JUnit ports of tests/domain
   src/main/res/                            strings, icons, themes
 ```
 
-## Routes
+## Navigation
 
-Route strings match [`Routes.kt`](app/src/main/kotlin/io/quiet/auth/ui/nav/Routes.kt) (Compose Navigation; no leading slash in code). Summarized here with a `/` prefix for readability.
+Top-level routes in [`Routes.kt`](app/src/main/kotlin/io/quiet/auth/ui/nav/Routes.kt). The main app shell is [`MainTabHost`](app/src/main/kotlin/io/quiet/auth/ui/nav/MainTabHost.kt) with three tabs: **Tokens**, **Backup**, **Settings**.
 
-| Path                         | Screen                                                       |
-|------------------------------|--------------------------------------------------------------|
-| `/start`                     | Bootstrap `START` (blank; forwards to onboarding / PIN / list) |
-| `/onboarding`                | `OnboardingScreen`                                           |
-| `/pin/{pinMode}`             | `PinScreen`                                                  |
-| `/twofas`                    | `TwoFAsScreen`                                               |
-| `/token/{id}`                | `TokenDetailsScreen`                                         |
-| `/add-2fa`                   | `AddTwoFAScreen`                                             |
-| `/add-2fa-qr`                | `AddTwoFAQrScreen`                                           |
-| `/settings`                  | `SettingsScreen` (hub: Security, Backup, Danger zone)        |
-| `/settings/security`         | `SettingsSecurityScreen` (PIN + biometrics)                  |
-| `/settings/backup`          | `SettingsBackupScreen` (CSV export / restore)                |
-| `/settings/danger-zone`      | `DangerZoneScreen` (destructive local actions)             |
-| `/backup-processing/{action}`| `BackupProcessingScreen`                                     |
-| `/developer-mode`            | `DeveloperModeScreen` → `DangerZoneScreen` (onboarding only; hidden gesture) |
+| Route | Screen |
+|-------|--------|
+| `/start` | Bootstrap (forwards to onboarding / PIN / main) |
+| `/onboarding` | `OnboardingScreen` |
+| `/pin/{pinMode}` | `PinScreen` |
+| `/twofas` | `MainTabHost` (token list, details, add flows; backup; security) |
+| `/backup-processing/{action}` | `BackupProcessingScreen` |
+| `/developer-mode` | `DangerZoneScreen` (hidden from onboarding) |
 
-`/settings/danger-zone` and `/developer-mode` share the same `DangerZoneScreen` UI; Settings uses the normal back label, onboarding uses “back to tokens”.
+Within the Tokens tab, navigation is an internal stack: list → token details → add (QR / manual). Settings includes a danger-zone sub-screen.
 
 ## Build
 

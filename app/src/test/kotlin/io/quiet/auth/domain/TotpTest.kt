@@ -18,4 +18,9 @@ class TotpTest {
         val code = generateTimeBasedCode("JBSWY3DPEHPK3PXP", 0L, digits = 8, period = 30)
         assertTrue("expected 8-digit numeric, was '$code'", code.matches(Regex("^\\d{8}$")))
     }
+
+    @Test fun `generates stable code for 2FAS test secret`() {
+        val code = generateTimeBasedCode("2FASTEST", 0L, digits = 6, period = 30, algorithm = OtpAlgorithm.SHA1)
+        assertEquals("154 007", code)
+    }
 }

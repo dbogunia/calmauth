@@ -6,51 +6,40 @@
     <string name="onboardingPinHint">A PIN is optional. It protects local access to your tokens on this device. You can turn it on anytime in Settings.</string>
     <string name="continueWithoutPin">Continue without PIN</string>
     <string name="protectWithPin">Protect app with PIN</string>
-    <string name="begin">Begin</string>
-    <string name="secureTagline">Secure. Quiet. Intentionally minimal.</string>
 
-    <string name="twofaTitle">Your 2FA Accounts</string>
-    <string name="twofaSubtitle">Your personal authenticator entries loaded securely from local encrypted storage.</string>
-    <string name="add2fa">Add 2FA</string>
+    <string name="navTokens">Tokens</string>
+    <string name="navBackup">Backup</string>
+    <string name="navSettings">Settings</string>
+    <string name="tokenExpiresSeconds">Expires in %1$ds</string>
     <string name="loadingAccounts">Loading your 2FA accounts…</string>
     <string name="emptyAccounts">No 2FA accounts yet. Tap Add 2FA to create your first entry.</string>
 
     <string name="add2faTitle">Add new 2FA</string>
-    <string name="add2faSubtitle">Add your authenticator details to keep all one-time codes in one secure place.</string>
     <string name="serviceName">Service name</string>
-    <string name="servicePlaceholder">e.g. GitHub</string>
     <string name="account">Account</string>
-    <string name="accountPlaceholder">e.g. dominik.dev</string>
     <string name="secretKey">Secret key</string>
-    <string name="secretPlaceholder">Paste setup key</string>
     <string name="save2fa">Save 2FA</string>
     <string name="cancel">Cancel</string>
     <string name="missingFieldsTitle">Missing fields</string>
     <string name="missingFieldsMessage">Please fill in service name, account, and secret key.</string>
+    <string name="secretKeyHint">Paste the Base32 secret (e.g. 2FASTEST) or a full otpauth:// link.</string>
+    <string name="invalidSecretTitle">Invalid secret</string>
+    <string name="invalidSecretMessage">The secret key is empty or not a valid Base32 key or otpauth link.</string>
 
     <string name="qrTitle">Scan 2FA QR Code</string>
     <string name="qrSubtitle">Point your camera at the QR code from the service setup screen.</string>
-    <string name="qrPermissionRequired">Camera permission is required to scan 2FA QR codes.</string>
-    <string name="enableCamera">Enable camera</string>
     <string name="invalidQrTitle">Invalid QR</string>
     <string name="invalidQrMessage">This QR code is not a valid 2FA setup code.</string>
     <string name="qrAddedTitle">2FA added</string>
     <string name="qrAddedMessage">Account has been added from QR code.</string>
     <string name="addManually">Add manually</string>
 
-    <string name="delete">Delete</string>
     <string name="deleteTokenTitle">Delete token?</string>
     <string name="deleteTokenMessage">This 2FA token will be permanently removed from your device.</string>
     <string name="confirmDelete">Delete token</string>
 
-    <string name="pinSetupSubtitle">Set a 4-digit PIN to set up app sign-in and protect access to your tokens.</string>
-    <string name="pinSetupSubtitleOptional">Create a 4-digit PIN to protect access to your tokens on this device.</string>
-    <string name="pinVerifyDisableSubtitle">Enter your PIN to turn off PIN protection.</string>
     <string name="pinProtectionDisabledMessage">PIN protection is off.</string>
     <string name="pinUnlockTitle">Unlock QuietAuth</string>
-    <string name="pinUnlockSubtitle">Enter your PIN to access your tokens.</string>
-    <string name="pinCodePlaceholder">Enter 4 digits</string>
-    <string name="pinConfirmPlaceholder">Re-enter your PIN</string>
     <string name="pinInvalidTitle">Invalid PIN</string>
     <string name="pinInvalidMessage">PIN must contain exactly 4 digits.</string>
     <string name="pinMismatchTitle">PIN does not match</string>
@@ -64,11 +53,7 @@
     <string name="biometricUnlockFailedMessage">Biometric verification failed. You can unlock with PIN.</string>
     <string name="unlockingApp">Verifying access…</string>
 
-    <string name="settingsCta">Settings</string>
-    <string name="settingsTitle">Settings</string>
-    <string name="settingsHubSubtitle">Security, backups, and advanced actions for local data.</string>
     <string name="settingsSecurityTitle">Security</string>
-    <string name="settingsSecuritySubtitle">Use a PIN and optional biometrics to control who can open the app on this device.</string>
     <string name="settingsBackupTitle">Backup</string>
     <string name="settingsBackupSubtitle">Export and restore entries as a CSV file. When PIN protection is on, unlock the app first for backup actions. The backup file is not encrypted — keep it private.</string>
     <string name="settingsBack">Back</string>
@@ -84,24 +69,26 @@
     <string name="createBackup">Export CSV backup</string>
     <string name="restoreBackup">Restore from CSV backup</string>
     <string name="backupCreatedTitle">Backup created</string>
-    <string name="saveBackupDialogTitle">Choose where to save backup</string>
     <string name="backupErrorTitle">Backup failed</string>
     <string name="backupErrorMessage">Could not create backup file.</string>
-    <string name="backupSessionExpiredMessage">Session expired. Unlock the app with PIN and try again.</string>
     <string name="restoreSuccessTitle">Restore complete</string>
-    <string name="restoreErrorTitle">Restore failed</string>
     <string name="restoreErrorMessage">Could not restore data. Check that the file is a QuietAuth CSV backup.</string>
     <string name="creatingBackupProgress">Creating backup…</string>
     <string name="restoringBackupProgress">Restoring backup…</string>
     <string name="backupProcessingHint">After selecting action, process runs on separate screen.</string>
 
     <string name="tokenNotFound">Token not found.</string>
-    <string name="backToTokens">Back to tokens</string>
-    <string name="tokenCode">Code</string>
-    <string name="codeExpiresIn">Expires in</string>
+    <string name="token_details_current_code">Current code</string>
+    <string name="token_details_field_account">Account</string>
+    <string name="token_details_field_type">Type</string>
+    <string name="token_details_field_added">Added</string>
+    <string name="token_details_field_in_backup">Exists in backup</string>
+    <string name="token_details_type_totp">TOTP</string>
+    <string name="token_details_not_available">—</string>
+    <string name="token_details_copy_code">Copy code</string>
+    <string name="token_details_copy_toast">Code copied</string>
 
     <string name="dangerZoneTitle">Danger zone</string>
-    <string name="dangerZoneSubtitle">Destructive actions for local app state. Use only for testing.</string>
     <string name="developerResetStorage">Reset all app storage</string>
     <string name="developerRemovePin">Remove PIN</string>
     <string name="developerRemoveBiometrics">Remove biometrics</string>
@@ -113,9 +100,5 @@
     <string name="developerRemoveBiometricsConfirmMessage">This will disable biometric unlock for this app.</string>
     <string name="developerConfirmAction">Confirm</string>
     <string name="developerActionSuccessTitle">Done</string>
-    <string name="developerActionErrorTitle">Action failed</string>
-    <string name="developerActionErrorMessage">Could not complete this action. Try again.</string>
     <string name="developerResetStorageSuccessMessage">All app storage has been reset.</string>
-    <string name="developerRemovePinSuccessMessage">PIN has been removed.</string>
-    <string name="developerRemoveBiometricsSuccessMessage">Biometric unlock has been removed.</string>
 </resources>

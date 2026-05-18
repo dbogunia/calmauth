@@ -6,23 +6,14 @@
     <string name="onboardingPinHint">PIN huwa mhux obbligatorju. Jipproteġi l-aċċess lokali għat-tokens fuq dan it-tagħmir. Tista\' tattivah kull meta mill-Issettjar.</string>
     <string name="continueWithoutPin">Kompli mingħajr PIN</string>
     <string name="protectWithPin">Ipproteġi l-app bil-PIN</string>
-    <string name="begin">Ibda</string>
-    <string name="secureTagline">Sigur. Diskret. Minimu bil-kunsens.</string>
 
-    <string name="twofaTitle">Il-kontijiet 2FA tiegħek</string>
-    <string name="twofaSubtitle">L-entrati tal-autentikatur jitgħabbew b\'mod sigur minn memorja lokali kriptata.</string>
-    <string name="add2fa">Żid 2FA</string>
     <string name="loadingAccounts">Qed jitgħabbew il-kontijiet 2FA…</string>
     <string name="emptyAccounts">Għad m\'hemm l-ebda kont 2FA. Agħfas Żid 2FA biex toħloq l-ewwel entrata.</string>
 
     <string name="add2faTitle">Żid 2FA ġdid</string>
-    <string name="add2faSubtitle">Żid id-dettalji tal-autentikatur biex il-kodiċijiet ta\' darba waħda jkunu f\'post wieħed sigur.</string>
     <string name="serviceName">Isem tas-servizz</string>
-    <string name="servicePlaceholder">eż. GitHub</string>
     <string name="account">Kont</string>
-    <string name="accountPlaceholder">eż. dominik.dev</string>
     <string name="secretKey">Ċavetta sigrieta</string>
-    <string name="secretPlaceholder">Pejstaċ ċavetta ta\' setup</string>
     <string name="save2fa">Issejvja 2FA</string>
     <string name="cancel">Ikkanċella</string>
     <string name="missingFieldsTitle">Oqsma nieqsa</string>
@@ -30,27 +21,18 @@
 
     <string name="qrTitle">Skanja kod QR 2FA</string>
     <string name="qrSubtitle">Iddirezzjona l-kamera lejn il-kod QR mill-iskrin tas-setup tas-servizz.</string>
-    <string name="qrPermissionRequired">Permess tal-kamera huwa meħtieġ biex tiskanja kod QR 2FA.</string>
-    <string name="enableCamera">Attiva l-kamera</string>
     <string name="invalidQrTitle">QR mhux validu</string>
     <string name="invalidQrMessage">Dan il-kod QR mhux kod ta\' setup validu għal 2FA.</string>
     <string name="qrAddedTitle">2FA miżjud</string>
     <string name="qrAddedMessage">Il-kont ġie miżjud mill-kod QR.</string>
     <string name="addManually">Żid bl-id</string>
 
-    <string name="delete">Ħassar</string>
     <string name="deleteTokenTitle">Ħassar it-token?</string>
     <string name="deleteTokenMessage">Dan it-token 2FA jitneħħa b\'mod permanenti mit-tagħmir tiegħek.</string>
     <string name="confirmDelete">Ħassar it-token</string>
 
-    <string name="pinSetupSubtitle">Issettja PIN ta\' 4 ċifri għal-login tal-app u protezzjoni ta\' aċċess għat-tokens.</string>
-    <string name="pinSetupSubtitleOptional">Oħloq PIN ta\' 4 ċifri biex tipproteġi l-aċċess għat-tokens fuq dan it-tagħmir.</string>
-    <string name="pinVerifyDisableSubtitle">Daħħal il-PIN biex itfi l-protezzjoni bil-PIN.</string>
     <string name="pinProtectionDisabledMessage">Il-protezzjoni bil-PIN hija mitfija.</string>
     <string name="pinUnlockTitle">Iftaħ QuietAuth</string>
-    <string name="pinUnlockSubtitle">Daħħal il-PIN biex taċċessa t-tokens tiegħek.</string>
-    <string name="pinCodePlaceholder">Daħħal 4 ċifri</string>
-    <string name="pinConfirmPlaceholder">Erġa\' daħħal il-PIN</string>
     <string name="pinInvalidTitle">PIN mhux validu</string>
     <string name="pinInvalidMessage">Il-PIN għandu jkun eżattament ta\' 4 ċifri.</string>
     <string name="pinMismatchTitle">Il-PIN ma jaqbilx</string>
@@ -64,11 +46,7 @@
     <string name="biometricUnlockFailedMessage">Il-verifika bijometrika falliet. Tista\' tiftaħ bil-PIN.</string>
     <string name="unlockingApp">Qed jiġi vverifikat l-aċċess…</string>
 
-    <string name="settingsCta">Issettjar</string>
-    <string name="settingsTitle">Issettjar</string>
-    <string name="settingsHubSubtitle">Sigurtà, kopji ta\' sigurtà u azzjonijiet avvanzati għal data lokali.</string>
     <string name="settingsSecurityTitle">Sigurtà</string>
-    <string name="settingsSecuritySubtitle">Il-PIN u l-bijometrika fakultattiva jikkontrollaw min jista\' jiftaħ l-app fuq dan it-tagħmir.</string>
     <string name="settingsBackupTitle">Backup</string>
     <string name="settingsBackupSubtitle">Esporta u rkuprera entrati bħala fajl CSV. Meta l-protezzjoni bil-PIN hija attiva, iftaħ l-app l-ewwel għal azzjonijiet ta\' backup. Il-fajl tal-backup mhux kriptat — żommu privat.</string>
     <string name="settingsBack">Lura</string>
@@ -84,24 +62,17 @@
     <string name="createBackup">Esporta backup CSV</string>
     <string name="restoreBackup">Irkupra minn backup CSV</string>
     <string name="backupCreatedTitle">Backup maħluq</string>
-    <string name="saveBackupDialogTitle">Agħżel fejn tissejvja l-backup</string>
     <string name="backupErrorTitle">Backup falla</string>
     <string name="backupErrorMessage">Ma setax jiġi maħluq il-fajl tal-backup.</string>
-    <string name="backupSessionExpiredMessage">Is-sessjoni skadiet. Iftaħ l-app bil-PIN u erġa\' pprova.</string>
     <string name="restoreSuccessTitle">Irkuprar komplut</string>
-    <string name="restoreErrorTitle">Irkuprar falla</string>
     <string name="restoreErrorMessage">Ma setgħux jiġu rkuprati d-data. Ivverifika li l-fajl hu backup CSV validu ta\' QuietAuth.</string>
     <string name="creatingBackupProgress">Qed joħloq backup…</string>
     <string name="restoringBackupProgress">Qed jirkupra backup…</string>
     <string name="backupProcessingHint">Wara li tagħżel l-azzjoni, il-proċess ikompli fuq skrin separat.</string>
 
     <string name="tokenNotFound">Token ma nstabx.</string>
-    <string name="backToTokens">Lura għat-tokens</string>
-    <string name="tokenCode">Kod</string>
-    <string name="codeExpiresIn">Jiskadi fi</string>
 
     <string name="dangerZoneTitle">Żona ta\' periklu</string>
-    <string name="dangerZoneSubtitle">Żona ta\' periklu għall-istat lokali tal-app. Uża biss għal test.</string>
     <string name="developerResetStorage">Irrisettja l-memorja kollha tal-app</string>
     <string name="developerRemovePin">Neħħi l-PIN</string>
     <string name="developerRemoveBiometrics">Neħħi l-bijometrika</string>
@@ -113,9 +84,5 @@
     <string name="developerRemoveBiometricsConfirmMessage">Dan itfi l-iftaħ bijometrika għal din l-app.</string>
     <string name="developerConfirmAction">Ikkonferma</string>
     <string name="developerActionSuccessTitle">Magħmul</string>
-    <string name="developerActionErrorTitle">L-azzjoni falliet</string>
-    <string name="developerActionErrorMessage">Ma setax jitkompla din l-azzjoni. Erġa\' pprova.</string>
     <string name="developerResetStorageSuccessMessage">Il-memorja kollha tal-app ġiet irreżettjata.</string>
-    <string name="developerRemovePinSuccessMessage">Il-PIN ġie neħħi.</string>
-    <string name="developerRemoveBiometricsSuccessMessage">L-iftaħ bijometrika ġie neħħi.</string>
 </resources>

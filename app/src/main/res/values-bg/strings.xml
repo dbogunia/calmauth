@@ -6,23 +6,14 @@
     <string name="onboardingPinHint">PIN е по избор. Защитава локалния достъп до токените на това устройство. Можете да го включите по всяко време от Настройки.</string>
     <string name="continueWithoutPin">Продължи без PIN</string>
     <string name="protectWithPin">Защити приложението с PIN</string>
-    <string name="begin">Започни</string>
-    <string name="secureTagline">Сигурно. Дискретно. Умишлено минималистично.</string>
 
-    <string name="twofaTitle">Вашите 2FA акаунти</string>
-    <string name="twofaSubtitle">Записите ви се зареждат сигурно от локално шифровано хранилище.</string>
-    <string name="add2fa">Добави 2FA</string>
     <string name="loadingAccounts">Зареждане на 2FA акаунти…</string>
     <string name="emptyAccounts">Все още няма 2FA акаунти. Докоснете Добави 2FA, за да създадете първия запис.</string>
 
     <string name="add2faTitle">Добавяне на ново 2FA</string>
-    <string name="add2faSubtitle">Добавете данните за автентикатор, за да държите всички еднократни кодове на едно сигурно място.</string>
     <string name="serviceName">Име на услуга</string>
-    <string name="servicePlaceholder">напр. GitHub</string>
     <string name="account">Акаунт</string>
-    <string name="accountPlaceholder">напр. dominik.dev</string>
     <string name="secretKey">Таен ключ</string>
-    <string name="secretPlaceholder">Поставете ключ за настройка</string>
     <string name="save2fa">Запази 2FA</string>
     <string name="cancel">Отказ</string>
     <string name="missingFieldsTitle">Липсващи полета</string>
@@ -30,27 +21,18 @@
 
     <string name="qrTitle">Сканирай QR код за 2FA</string>
     <string name="qrSubtitle">Насочете камерата към QR кода от екрана за настройка на услугата.</string>
-    <string name="qrPermissionRequired">Необходимо е разрешение за камера, за да се сканират QR кодове за 2FA.</string>
-    <string name="enableCamera">Разреши камера</string>
     <string name="invalidQrTitle">Невалиден QR</string>
     <string name="invalidQrMessage">Този QR код не е валиден код за настройка на 2FA.</string>
     <string name="qrAddedTitle">2FA добавено</string>
     <string name="qrAddedMessage">Акаунтът е добавен от QR код.</string>
     <string name="addManually">Добави ръчно</string>
 
-    <string name="delete">Изтрий</string>
     <string name="deleteTokenTitle">Изтриване на токен?</string>
     <string name="deleteTokenMessage">Този 2FA токен ще бъде окончателно премахнат от устройството.</string>
     <string name="confirmDelete">Изтрий токена</string>
 
-    <string name="pinSetupSubtitle">Задайте 4-цифрен PIN за вход в приложението и защита на достъпа до токените.</string>
-    <string name="pinSetupSubtitleOptional">Създайте 4-цифрен PIN, за да защитите достъпа до токените на това устройство.</string>
-    <string name="pinVerifyDisableSubtitle">Въведете PIN, за да изключите PIN защитата.</string>
     <string name="pinProtectionDisabledMessage">PIN защитата е изключена.</string>
     <string name="pinUnlockTitle">Отключи QuietAuth</string>
-    <string name="pinUnlockSubtitle">Въведете PIN за достъп до токените.</string>
-    <string name="pinCodePlaceholder">Въведете 4 цифри</string>
-    <string name="pinConfirmPlaceholder">Повторете PIN</string>
     <string name="pinInvalidTitle">Невалиден PIN</string>
     <string name="pinInvalidMessage">PIN трябва да съдържа точно 4 цифри.</string>
     <string name="pinMismatchTitle">PIN не съвпада</string>
@@ -64,11 +46,7 @@
     <string name="biometricUnlockFailedMessage">Биометричната проверка не успя. Можете да отключите с PIN.</string>
     <string name="unlockingApp">Проверка на достъп…</string>
 
-    <string name="settingsCta">Настройки</string>
-    <string name="settingsTitle">Настройки</string>
-    <string name="settingsHubSubtitle">Сигурност, резервни копия и разширени действия за локални данни.</string>
     <string name="settingsSecurityTitle">Сигурност</string>
-    <string name="settingsSecuritySubtitle">PIN и по желание биометрия определят кой може да отвори приложението на това устройство.</string>
     <string name="settingsBackupTitle">Резервно копие</string>
     <string name="settingsBackupSubtitle">Експорт и възстановяване на записи като CSV файл. При включена PIN защита първо отключете приложението. Резервният файл не е шифрован — пазете го поверителен.</string>
     <string name="settingsBack">Назад</string>
@@ -84,24 +62,17 @@
     <string name="createBackup">Експорт на CSV резервно копие</string>
     <string name="restoreBackup">Възстановяване от CSV</string>
     <string name="backupCreatedTitle">Резервно копие е създадено</string>
-    <string name="saveBackupDialogTitle">Изберете къде да запазите резервното копие</string>
     <string name="backupErrorTitle">Грешка при резервно копие</string>
     <string name="backupErrorMessage">Неуспешно създаване на файл за резервно копие.</string>
-    <string name="backupSessionExpiredMessage">Сесията изтече. Отключете с PIN и опитайте отново.</string>
     <string name="restoreSuccessTitle">Възстановяването завърши</string>
-    <string name="restoreErrorTitle">Грешка при възстановяване</string>
     <string name="restoreErrorMessage">Неуспешно възстановяване. Проверете дали файлът е валидно CSV резервно копие на QuietAuth.</string>
     <string name="creatingBackupProgress">Създаване на резервно копие…</string>
     <string name="restoringBackupProgress">Възстановяване…</string>
     <string name="backupProcessingHint">След избор на действие процесът продължава на отделен екран.</string>
 
     <string name="tokenNotFound">Токенът не е намерен.</string>
-    <string name="backToTokens">Назад към токените</string>
-    <string name="tokenCode">Код</string>
-    <string name="codeExpiresIn">Изтича след</string>
 
     <string name="dangerZoneTitle">Опасна зона</string>
-    <string name="dangerZoneSubtitle">Опасна зона за локалното състояние на приложението. Само за тестове.</string>
     <string name="developerResetStorage">Нулирай всички данни на приложението</string>
     <string name="developerRemovePin">Премахни PIN</string>
     <string name="developerRemoveBiometrics">Премахни биометрия</string>
@@ -113,9 +84,5 @@
     <string name="developerRemoveBiometricsConfirmMessage">Това ще изключи биометричното отключване за приложението.</string>
     <string name="developerConfirmAction">Потвърди</string>
     <string name="developerActionSuccessTitle">Готово</string>
-    <string name="developerActionErrorTitle">Действието не успя</string>
-    <string name="developerActionErrorMessage">Неуспешно изпълнение. Опитайте отново.</string>
     <string name="developerResetStorageSuccessMessage">Всички данни на приложението са нулирани.</string>
-    <string name="developerRemovePinSuccessMessage">PIN е премахнат.</string>
-    <string name="developerRemoveBiometricsSuccessMessage">Биометричното отключване е премахнато.</string>
 </resources>

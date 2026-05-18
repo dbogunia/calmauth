@@ -6,23 +6,14 @@
     <string name="onboardingPinHint">PIN-koodi ei ole pakollinen. Se suojaa paikallista pääsyä tunnisteisiisi tällä laitteella. Voit ottaa sen käyttöön milloin tahansa asetuksista.</string>
     <string name="continueWithoutPin">Jatka ilman PIN-koodia</string>
     <string name="protectWithPin">Suojaa sovellus PIN-koodilla</string>
-    <string name="begin">Aloita</string>
-    <string name="secureTagline">Turvallinen. Hillitty. Tietoisen pelkistetty.</string>
 
-    <string name="twofaTitle">2FA-tilisi</string>
-    <string name="twofaSubtitle">Autentikointimerkinnät ladataan turvallisesti paikallisesta salatusta tallennustilasta.</string>
-    <string name="add2fa">Lisää 2FA</string>
     <string name="loadingAccounts">Ladataan 2FA-tilejä…</string>
     <string name="emptyAccounts">Ei vielä 2FA-tilejä. Napauta Lisää 2FA luodaksesi ensimmäinen merkintä.</string>
 
     <string name="add2faTitle">Lisää uusi 2FA</string>
-    <string name="add2faSubtitle">Lisää autentikointitietosi, jotta kaikki kertakäyttökoodit ovat yhdessä turvallisessa paikassa.</string>
     <string name="serviceName">Palvelun nimi</string>
-    <string name="servicePlaceholder">esim. GitHub</string>
     <string name="account">Tili</string>
-    <string name="accountPlaceholder">esim. dominik.dev</string>
     <string name="secretKey">Salainen avain</string>
-    <string name="secretPlaceholder">Liitä asetusavain</string>
     <string name="save2fa">Tallenna 2FA</string>
     <string name="cancel">Peruuta</string>
     <string name="missingFieldsTitle">Puuttuvat kentät</string>
@@ -30,27 +21,18 @@
 
     <string name="qrTitle">Skannaa 2FA QR-koodi</string>
     <string name="qrSubtitle">Osoita kamera palvelun asetusnäytön QR-koodiin.</string>
-    <string name="qrPermissionRequired">Kameran käyttöoikeus tarvitaan 2FA QR-koodien skannaamiseen.</string>
-    <string name="enableCamera">Ota kamera käyttöön</string>
     <string name="invalidQrTitle">Virheellinen QR</string>
     <string name="invalidQrMessage">Tämä QR-koodi ei ole kelvollinen 2FA-asetuskoodi.</string>
     <string name="qrAddedTitle">2FA lisätty</string>
     <string name="qrAddedMessage">Tili lisättiin QR-koodista.</string>
     <string name="addManually">Lisää manuaalisesti</string>
 
-    <string name="delete">Poista</string>
     <string name="deleteTokenTitle">Poistetaanko tunniste?</string>
     <string name="deleteTokenMessage">Tämä 2FA-tunniste poistetaan pysyvästi laitteesta.</string>
     <string name="confirmDelete">Poista tunniste</string>
 
-    <string name="pinSetupSubtitle">Aseta nelinumeroinen PIN sovelluksen avaukseen ja tunnisteiden suojaamiseen.</string>
-    <string name="pinSetupSubtitleOptional">Luo nelinumeroinen PIN suojataksesi pääsyn tunnisteisiin tällä laitteella.</string>
-    <string name="pinVerifyDisableSubtitle">Syötä PIN poistaaksesi PIN-suojauksen käytöstä.</string>
     <string name="pinProtectionDisabledMessage">PIN-suojaus on pois päältä.</string>
     <string name="pinUnlockTitle">Avaa QuietAuth</string>
-    <string name="pinUnlockSubtitle">Syötä PIN saadaksesi pääsyn tunnisteisiin.</string>
-    <string name="pinCodePlaceholder">Syötä 4 numeroa</string>
-    <string name="pinConfirmPlaceholder">Syötä PIN uudelleen</string>
     <string name="pinInvalidTitle">Virheellinen PIN</string>
     <string name="pinInvalidMessage">PIN:n on sisällettävä täsmälleen 4 numeroa.</string>
     <string name="pinMismatchTitle">PIN ei täsmää</string>
@@ -64,11 +46,7 @@
     <string name="biometricUnlockFailedMessage">Biometrinen vahvistus epäonnistui. Voit avata PIN-koodilla.</string>
     <string name="unlockingApp">Vahvistetaan pääsyä…</string>
 
-    <string name="settingsCta">Asetukset</string>
-    <string name="settingsTitle">Asetukset</string>
-    <string name="settingsHubSubtitle">Turvallisuus, varmuuskopiot ja edistyneet toiminnot paikallisille tiedoille.</string>
     <string name="settingsSecurityTitle">Turvallisuus</string>
-    <string name="settingsSecuritySubtitle">PIN ja valinnainen biometria hallitsevat, kuka voi avata sovelluksen tällä laitteella.</string>
     <string name="settingsBackupTitle">Varmuuskopio</string>
     <string name="settingsBackupSubtitle">Vie ja palauta merkinnät CSV-tiedostona. Kun PIN-suojaus on päällä, avaa sovellus ensin. Varmuuskopiotiedosto ei ole salattu — pidä se yksityisenä.</string>
     <string name="settingsBack">Takaisin</string>
@@ -84,24 +62,17 @@
     <string name="createBackup">Vie CSV-varmuuskopio</string>
     <string name="restoreBackup">Palauta CSV-varmuuskopiosta</string>
     <string name="backupCreatedTitle">Varmuuskopio luotu</string>
-    <string name="saveBackupDialogTitle">Valitse tallennuspaikka varmuuskopiolle</string>
     <string name="backupErrorTitle">Varmuuskopiointi epäonnistui</string>
     <string name="backupErrorMessage">Varmuuskopiotiedostoa ei voitu luoda.</string>
-    <string name="backupSessionExpiredMessage">Istunto vanhentui. Avaa sovellus PIN-koodilla ja yritä uudelleen.</string>
     <string name="restoreSuccessTitle">Palautus valmis</string>
-    <string name="restoreErrorTitle">Palautus epäonnistui</string>
     <string name="restoreErrorMessage">Tietoja ei voitu palauttaa. Varmista, että tiedosto on kelvollinen QuietAuth CSV-varmuuskopio.</string>
     <string name="creatingBackupProgress">Luodaan varmuuskopiota…</string>
     <string name="restoringBackupProgress">Palautetaan varmuuskopiota…</string>
     <string name="backupProcessingHint">Toiminnon valinnan jälkeen prosessi jatkuu erillisellä näytöllä.</string>
 
     <string name="tokenNotFound">Tunnistetta ei löydy.</string>
-    <string name="backToTokens">Takaisin tunnisteisiin</string>
-    <string name="tokenCode">Koodi</string>
-    <string name="codeExpiresIn">Vanhenee</string>
 
     <string name="dangerZoneTitle">Vaaravyöhyke</string>
-    <string name="dangerZoneSubtitle">Vaaravyöhyke paikalliselle sovellustilalle. Vain testaukseen.</string>
     <string name="developerResetStorage">Tyhjennä kaikki sovelluksen tallennustila</string>
     <string name="developerRemovePin">Poista PIN</string>
     <string name="developerRemoveBiometrics">Poista biometria</string>
@@ -113,9 +84,5 @@
     <string name="developerRemoveBiometricsConfirmMessage">Tämä poistaa biometrisen avauksen käytöstä tässä sovelluksessa.</string>
     <string name="developerConfirmAction">Vahvista</string>
     <string name="developerActionSuccessTitle">Valmis</string>
-    <string name="developerActionErrorTitle">Toiminto epäonnistui</string>
-    <string name="developerActionErrorMessage">Toimintoa ei voitu suorittaa. Yritä uudelleen.</string>
     <string name="developerResetStorageSuccessMessage">Kaikki sovelluksen tallennustila on tyhjennetty.</string>
-    <string name="developerRemovePinSuccessMessage">PIN on poistettu.</string>
-    <string name="developerRemoveBiometricsSuccessMessage">Biometrinen avaus on poistettu.</string>
 </resources>

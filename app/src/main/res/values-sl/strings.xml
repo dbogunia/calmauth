@@ -6,23 +6,14 @@
     <string name="onboardingPinHint">PIN je neobvezen. Ščiti lokalni dostop do žetonov na tej napravi. Lahko ga kadar koli vklopite v Nastavitvah.</string>
     <string name="continueWithoutPin">Nadaljuj brez PIN</string>
     <string name="protectWithPin">Zaščiti aplikacijo s PIN</string>
-    <string name="begin">Začni</string>
-    <string name="secureTagline">Varno. Diskretno. Namerno minimalno.</string>
 
-    <string name="twofaTitle">Vaši 2FA računi</string>
-    <string name="twofaSubtitle">Vpisi avtentikatorja se varno naložijo iz lokalne šifrirane shrambe.</string>
-    <string name="add2fa">Dodaj 2FA</string>
     <string name="loadingAccounts">Nalaganje 2FA računov…</string>
     <string name="emptyAccounts">Še ni 2FA računov. Tapnite Dodaj 2FA za prvi vnos.</string>
 
     <string name="add2faTitle">Dodaj novo 2FA</string>
-    <string name="add2faSubtitle">Dodajte podatke avtentikatorja, da bodo vsi enkratni kodi na enem varnem mestu.</string>
     <string name="serviceName">Ime storitve</string>
-    <string name="servicePlaceholder">npr. GitHub</string>
     <string name="account">Račun</string>
-    <string name="accountPlaceholder">npr. dominik.dev</string>
     <string name="secretKey">Skrivni ključ</string>
-    <string name="secretPlaceholder">Prilepite ključ za nastavitev</string>
     <string name="save2fa">Shrani 2FA</string>
     <string name="cancel">Prekliči</string>
     <string name="missingFieldsTitle">Manjkajoča polja</string>
@@ -30,27 +21,18 @@
 
     <string name="qrTitle">Skeniraj QR kodo 2FA</string>
     <string name="qrSubtitle">Usmerite kamero na QR kodo z zaslona za nastavitev storitve.</string>
-    <string name="qrPermissionRequired">Za skeniranje QR kod 2FA je potrebno dovoljenje kamere.</string>
-    <string name="enableCamera">Omogoči kamero</string>
     <string name="invalidQrTitle">Neveljavna QR</string>
     <string name="invalidQrMessage">Ta QR koda ni veljavna koda za nastavitev 2FA.</string>
     <string name="qrAddedTitle">2FA dodano</string>
     <string name="qrAddedMessage">Račun je bil dodan iz QR kode.</string>
     <string name="addManually">Dodaj ročno</string>
 
-    <string name="delete">Izbriši</string>
     <string name="deleteTokenTitle">Izbrisati žeton?</string>
     <string name="deleteTokenMessage">Ta 2FA žeton bo trajno odstranjen z naprave.</string>
     <string name="confirmDelete">Izbriši žeton</string>
 
-    <string name="pinSetupSubtitle">Nastavite 4-mestni PIN za prijavo v aplikacijo in zaščito dostopa do žetonov.</string>
-    <string name="pinSetupSubtitleOptional">Ustvarite 4-mestni PIN za zaščito dostopa do žetonov na tej napravi.</string>
-    <string name="pinVerifyDisableSubtitle">Vnesite PIN, da izklopite PIN zaščito.</string>
     <string name="pinProtectionDisabledMessage">PIN zaščita je izklopljena.</string>
     <string name="pinUnlockTitle">Odkleni QuietAuth</string>
-    <string name="pinUnlockSubtitle">Vnesite PIN za dostop do žetonov.</string>
-    <string name="pinCodePlaceholder">Vnesite 4 številke</string>
-    <string name="pinConfirmPlaceholder">Ponovno vnesite PIN</string>
     <string name="pinInvalidTitle">Neveljaven PIN</string>
     <string name="pinInvalidMessage">PIN mora vsebovati natanko 4 številke.</string>
     <string name="pinMismatchTitle">PIN se ne ujema</string>
@@ -64,11 +46,7 @@
     <string name="biometricUnlockFailedMessage">Biometrična preverba ni uspela. Lahko odklenete s PIN.</string>
     <string name="unlockingApp">Preverjanje dostopa…</string>
 
-    <string name="settingsCta">Nastavitve</string>
-    <string name="settingsTitle">Nastavitve</string>
-    <string name="settingsHubSubtitle">Varnost, varnostne kopije in napredna dejanja za lokalne podatke.</string>
     <string name="settingsSecurityTitle">Varnost</string>
-    <string name="settingsSecuritySubtitle">PIN in izbirna biometrija določata, kdo lahko odpre aplikacijo na tej napravi.</string>
     <string name="settingsBackupTitle">Varnostna kopija</string>
     <string name="settingsBackupSubtitle">Izvozi in obnovi vnose kot CSV datoteko. Če je PIN zaščita vključena, najprej odklenite aplikacijo. Varnostna kopija ni šifrirana — hranite jo zasebno.</string>
     <string name="settingsBack">Nazaj</string>
@@ -84,24 +62,17 @@
     <string name="createBackup">Izvozi CSV varnostno kopijo</string>
     <string name="restoreBackup">Obnovi iz CSV kopije</string>
     <string name="backupCreatedTitle">Varnostna kopija ustvarjena</string>
-    <string name="saveBackupDialogTitle">Izberite mesto za shranjevanje kopije</string>
     <string name="backupErrorTitle">Varnostna kopija ni uspela</string>
     <string name="backupErrorMessage">Datoteke varnostne kopije ni bilo mogoče ustvariti.</string>
-    <string name="backupSessionExpiredMessage">Seja je potekla. Odklenite aplikacijo s PIN in poskusite znova.</string>
     <string name="restoreSuccessTitle">Obnova končana</string>
-    <string name="restoreErrorTitle">Obnova ni uspela</string>
     <string name="restoreErrorMessage">Podatkov ni bilo mogoče obnoviti. Preverite, ali je datoteka veljavna CSV varnostna kopija QuietAuth.</string>
     <string name="creatingBackupProgress">Ustvarjanje varnostne kopije…</string>
     <string name="restoringBackupProgress">Obnavljanje kopije…</string>
     <string name="backupProcessingHint">Po izbiri dejanja proces poteka na ločenem zaslonu.</string>
 
     <string name="tokenNotFound">Žeton ni bil najden.</string>
-    <string name="backToTokens">Nazaj k žetonom</string>
-    <string name="tokenCode">Koda</string>
-    <string name="codeExpiresIn">Poteče čez</string>
 
     <string name="dangerZoneTitle">Nevarno območje</string>
-    <string name="dangerZoneSubtitle">Nevarno območje za lokalno stanje aplikacije. Samo za testiranje.</string>
     <string name="developerResetStorage">Ponastavi celotno shrambo aplikacije</string>
     <string name="developerRemovePin">Odstrani PIN</string>
     <string name="developerRemoveBiometrics">Odstrani biometrijo</string>
@@ -113,9 +84,5 @@
     <string name="developerRemoveBiometricsConfirmMessage">To izklopi biometrično odklepanje za to aplikacijo.</string>
     <string name="developerConfirmAction">Potrdi</string>
     <string name="developerActionSuccessTitle">Končano</string>
-    <string name="developerActionErrorTitle">Dejanje ni uspelo</string>
-    <string name="developerActionErrorMessage">Dejanja ni bilo mogoče dokončati. Poskusite znova.</string>
     <string name="developerResetStorageSuccessMessage">Celotna shramba aplikacije je ponastavljena.</string>
-    <string name="developerRemovePinSuccessMessage">PIN je bil odstranjen.</string>
-    <string name="developerRemoveBiometricsSuccessMessage">Biometrično odklepanje je bilo odstranjeno.</string>
 </resources>

@@ -6,23 +6,14 @@
     <string name="onboardingPinHint">PIN er valkvætt. Það verndar staðværan aðgang að teiknum þínum á þessu tæki. Þú getur kveikt á því hvenær sem er í stillingum.</string>
     <string name="continueWithoutPin">Halda áfram án PIN</string>
     <string name="protectWithPin">Vernda app með PIN</string>
-    <string name="begin">Byrja</string>
-    <string name="secureTagline">Öruggt. Hófstætt. Meðvitaður einfaldur.</string>
 
-    <string name="twofaTitle">2FA reikningarnir þínir</string>
-    <string name="twofaSubtitle">Færslur þínar frá auðkennisforriti eru hlaðnar örugglega úr staðværu dulkóðuðu geymslunni.</string>
-    <string name="add2fa">Bæta við 2FA</string>
     <string name="loadingAccounts">Hleð 2FA reikningum…</string>
     <string name="emptyAccounts">Engir 2FA reikningar ennþá. Ýttu á Bæta við 2FA til að búa til fyrstu færsluna.</string>
 
     <string name="add2faTitle">Bæta við nýju 2FA</string>
-    <string name="add2faSubtitle">Bættu við auðkennisupplýsingum þínum til að halda öllum einnota kóðum á einum öruggum stað.</string>
     <string name="serviceName">Heiti þjónustu</string>
-    <string name="servicePlaceholder">t.d. GitHub</string>
     <string name="account">Reikningur</string>
-    <string name="accountPlaceholder">t.d. dominik.dev</string>
     <string name="secretKey">Leyni lykill</string>
-    <string name="secretPlaceholder">Límdu uppsetningarlykil</string>
     <string name="save2fa">Vista 2FA</string>
     <string name="cancel">Hætta við</string>
     <string name="missingFieldsTitle">Reitir vantar</string>
@@ -30,27 +21,18 @@
 
     <string name="qrTitle">Skannaðu 2FA QR-kóða</string>
     <string name="qrSubtitle">Beindu myndavél að QR-kóðanum á uppsetningarskjá þjónustunnar.</string>
-    <string name="qrPermissionRequired">Myndavélarheimild er nauðsynleg til að skanna 2FA QR-kóða.</string>
-    <string name="enableCamera">Kveikja á myndavél</string>
     <string name="invalidQrTitle">Ógildur QR</string>
     <string name="invalidQrMessage">Þessi QR-kóði er ekki gildur 2FA uppsetningarkóði.</string>
     <string name="qrAddedTitle">2FA bætt við</string>
     <string name="qrAddedMessage">Reikningur var bætt við úr QR-kóða.</string>
     <string name="addManually">Bæta við handvirkt</string>
 
-    <string name="delete">Eyða</string>
     <string name="deleteTokenTitle">Eyða teikni?</string>
     <string name="deleteTokenMessage">Þetta 2FA teikn verður varanlega fjarlægt af tækinu.</string>
     <string name="confirmDelete">Eyða teikni</string>
 
-    <string name="pinSetupSubtitle">Stilltu 4 stafa PIN til að opna appið og vernda aðgang að teiknum.</string>
-    <string name="pinSetupSubtitleOptional">Búðu til 4 stafa PIN til að vernda aðgang að teiknum á þessu tæki.</string>
-    <string name="pinVerifyDisableSubtitle">Sláðu inn PIN til að slökkva á PIN vernd.</string>
     <string name="pinProtectionDisabledMessage">PIN vernd er slökkt.</string>
     <string name="pinUnlockTitle">Opna QuietAuth</string>
-    <string name="pinUnlockSubtitle">Sláðu inn PIN til að nálgast teiknin þín.</string>
-    <string name="pinCodePlaceholder">Sláðu inn 4 tölustafi</string>
-    <string name="pinConfirmPlaceholder">Sláðu PIN aftur inn</string>
     <string name="pinInvalidTitle">Ógildur PIN</string>
     <string name="pinInvalidMessage">PIN verður að innihalda nákvæmlega 4 tölustafi.</string>
     <string name="pinMismatchTitle">PIN stemmir ekki</string>
@@ -64,11 +46,7 @@
     <string name="biometricUnlockFailedMessage">Lífeinda staðfesting mistókst. Þú getur opnað með PIN.</string>
     <string name="unlockingApp">Staðfestir aðgang…</string>
 
-    <string name="settingsCta">Stillingar</string>
-    <string name="settingsTitle">Stillingar</string>
-    <string name="settingsHubSubtitle">Öryggi, öryggisafrit og ítarlegar aðgerðir fyrir staðvæg gögn.</string>
     <string name="settingsSecurityTitle">Öryggi</string>
-    <string name="settingsSecuritySubtitle">PIN og valkvæð lífkenni stjórna því hver getur opnað appið á þessu tæki.</string>
     <string name="settingsBackupTitle">Öryggisafrit</string>
     <string name="settingsBackupSubtitle">Flytja út og endurheimta færslur sem CSV skrá. Þegar PIN vernd er á skaltu fyrst opna appið. Öryggisafrit er ekki dulkóðað — haltu því leynilegu.</string>
     <string name="settingsBack">Til baka</string>
@@ -84,24 +62,17 @@
     <string name="createBackup">Flytja út CSV öryggisafrit</string>
     <string name="restoreBackup">Endurheimta úr CSV öryggisafriti</string>
     <string name="backupCreatedTitle">Öryggisafrit búið til</string>
-    <string name="saveBackupDialogTitle">Veldu hvar á að vista afritið</string>
     <string name="backupErrorTitle">Öryggisafrit mistókst</string>
     <string name="backupErrorMessage">Ekki tókst að búa til öryggisafritsskrá.</string>
-    <string name="backupSessionExpiredMessage">Lot rann út. Opnaðu appið með PIN og reyndu aftur.</string>
     <string name="restoreSuccessTitle">Endurheimt lokið</string>
-    <string name="restoreErrorTitle">Endurheimt mistókst</string>
     <string name="restoreErrorMessage">Ekki tókst að endurheimta gögn. Athugaðu að skráin sé gilt QuietAuth CSV öryggisafrit.</string>
     <string name="creatingBackupProgress">Bý til öryggisafrit…</string>
     <string name="restoringBackupProgress">Endurheimti öryggisafrit…</string>
     <string name="backupProcessingHint">Eftir að velja aðgerð keyrir ferlið á sér skjá.</string>
 
     <string name="tokenNotFound">Teikn fannst ekki.</string>
-    <string name="backToTokens">Til baka í teikn</string>
-    <string name="tokenCode">Kóði</string>
-    <string name="codeExpiresIn">Rennur út eftir</string>
 
     <string name="dangerZoneTitle">Hættusvæði</string>
-    <string name="dangerZoneSubtitle">Hættusvæði fyrir staðvært ástand appsins. Aðeins til prófunar.</string>
     <string name="developerResetStorage">Endurstilla alla app geymslu</string>
     <string name="developerRemovePin">Fjarlægja PIN</string>
     <string name="developerRemoveBiometrics">Fjarlægja lífeinda auðkenni</string>
@@ -113,9 +84,5 @@
     <string name="developerRemoveBiometricsConfirmMessage">Þetta slökkt á lífeinda opnun fyrir þetta app.</string>
     <string name="developerConfirmAction">Staðfesta</string>
     <string name="developerActionSuccessTitle">Lokið</string>
-    <string name="developerActionErrorTitle">Aðgerð mistókst</string>
-    <string name="developerActionErrorMessage">Ekki tókst að ljúka aðgerðinni. Reyndu aftur.</string>
     <string name="developerResetStorageSuccessMessage">Öll app geymsla var endurstillt.</string>
-    <string name="developerRemovePinSuccessMessage">PIN var fjarlægt.</string>
-    <string name="developerRemoveBiometricsSuccessMessage">Lífeinda opnun var fjarlægð.</string>
 </resources>

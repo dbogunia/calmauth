@@ -6,51 +6,39 @@
     <string name="onboardingPinHint">PIN jest opcjonalny. Chroni lokalny dostęp do tokenów na tym urządzeniu. Włączysz go w każdej chwili w Ustawieniach.</string>
     <string name="continueWithoutPin">Kontynuuj bez PIN-u</string>
     <string name="protectWithPin">Chroń aplikację PIN-em</string>
-    <string name="begin">Start</string>
-    <string name="secureTagline">Bezpiecznie. Z większą dyskrecją. Świadomie minimalistycznie.</string>
 
-    <string name="twofaTitle">Twoje konta 2FA</string>
-    <string name="twofaSubtitle">Twoje wpisy uwierzytelniające są ładowane bezpiecznie z lokalnego magazynu szyfrowanego.</string>
-    <string name="add2fa">Dodaj 2FA</string>
+    <string name="navTokens">Tokeny</string>
+    <string name="navBackup">Backup</string>
+    <string name="navSettings">Ustawienia</string>
     <string name="loadingAccounts">Wczytywanie kont 2FA…</string>
     <string name="emptyAccounts">Brak kont 2FA. Kliknij Dodaj 2FA, aby dodać pierwszy wpis.</string>
 
     <string name="add2faTitle">Dodaj nowe 2FA</string>
-    <string name="add2faSubtitle">Dodaj dane uwierzytelniające, aby trzymać wszystkie kody jednorazowe w jednym miejscu.</string>
     <string name="serviceName">Nazwa serwisu</string>
-    <string name="servicePlaceholder">np. GitHub</string>
     <string name="account">Konto</string>
-    <string name="accountPlaceholder">np. dominik.dev</string>
     <string name="secretKey">Klucz tajny</string>
-    <string name="secretPlaceholder">Wklej klucz konfiguracyjny</string>
     <string name="save2fa">Zapisz 2FA</string>
     <string name="cancel">Anuluj</string>
     <string name="missingFieldsTitle">Brakujące pola</string>
     <string name="missingFieldsMessage">Uzupełnij nazwę serwisu, konto i klucz tajny.</string>
+    <string name="secretKeyHint">Wklej klucz Base32 (np. 2FASTEST) lub pełny link otpauth://.</string>
+    <string name="invalidSecretTitle">Nieprawidłowy klucz</string>
+    <string name="invalidSecretMessage">Klucz tajny jest pusty lub nie jest poprawnym kluczem Base32 ani linkiem otpauth.</string>
 
     <string name="qrTitle">Zeskanuj kod QR 2FA</string>
     <string name="qrSubtitle">Skieruj aparat na kod QR z ekranu konfiguracji usługi.</string>
-    <string name="qrPermissionRequired">Uprawnienie do aparatu jest wymagane do skanowania kodów QR 2FA.</string>
-    <string name="enableCamera">Włącz aparat</string>
     <string name="invalidQrTitle">Nieprawidłowy kod QR</string>
     <string name="invalidQrMessage">Ten kod QR nie jest poprawnym kodem konfiguracji 2FA.</string>
     <string name="qrAddedTitle">Dodano 2FA</string>
     <string name="qrAddedMessage">Konto zostało dodane z kodu QR.</string>
     <string name="addManually">Dodaj ręcznie</string>
 
-    <string name="delete">Usuń</string>
     <string name="deleteTokenTitle">Usunąć token?</string>
     <string name="deleteTokenMessage">Ten token 2FA zostanie trwale usunięty z urządzenia.</string>
     <string name="confirmDelete">Usuń token</string>
 
-    <string name="pinSetupSubtitle">Ustaw 4-cyfrowy PIN, aby skonfigurować logowanie do aplikacji i zabezpieczyć dostęp do tokenów.</string>
-    <string name="pinSetupSubtitleOptional">Utwórz 4-cyfrowy PIN, aby chronić dostęp do tokenów na tym urządzeniu.</string>
-    <string name="pinVerifyDisableSubtitle">Wpisz PIN, aby wyłączyć ochronę PIN-em.</string>
     <string name="pinProtectionDisabledMessage">Ochrona PIN-em jest wyłączona.</string>
     <string name="pinUnlockTitle">Odblokuj QuietAuth</string>
-    <string name="pinUnlockSubtitle">Wpisz PIN, aby uzyskać dostęp do tokenów.</string>
-    <string name="pinCodePlaceholder">Wpisz 4 cyfry</string>
-    <string name="pinConfirmPlaceholder">Wpisz PIN ponownie</string>
     <string name="pinInvalidTitle">Nieprawidłowy PIN</string>
     <string name="pinInvalidMessage">PIN musi składać się dokładnie z 4 cyfr.</string>
     <string name="pinMismatchTitle">PIN nie pasuje</string>
@@ -64,11 +52,7 @@
     <string name="biometricUnlockFailedMessage">Weryfikacja biometryczna nie powiodła się. Możesz odblokować aplikację PIN-em.</string>
     <string name="unlockingApp">Weryfikowanie dostępu…</string>
 
-    <string name="settingsCta">Ustawienia</string>
-    <string name="settingsTitle">Ustawienia</string>
-    <string name="settingsHubSubtitle">Bezpieczeństwo, kopie zapasowe i zaawansowane działania na lokalnych danych.</string>
     <string name="settingsSecurityTitle">Bezpieczeństwo</string>
-    <string name="settingsSecuritySubtitle">PIN i opcjonalna biometria decydują, kto może otworzyć aplikację na tym urządzeniu.</string>
     <string name="settingsBackupTitle">Kopia zapasowa</string>
     <string name="settingsBackupSubtitle">Eksport i przywracanie wpisów jako plik CSV. Przy włączonej ochronie PIN-em najpierw odblokuj aplikację. Plik backupu nie jest szyfrowany — przechowuj go bezpiecznie.</string>
     <string name="settingsBack">Powrót</string>
@@ -84,24 +68,26 @@
     <string name="createBackup">Eksportuj backup CSV</string>
     <string name="restoreBackup">Przywróć z pliku CSV</string>
     <string name="backupCreatedTitle">Backup utworzony</string>
-    <string name="saveBackupDialogTitle">Wybierz miejsce zapisu backupu</string>
     <string name="backupErrorTitle">Błąd backupu</string>
     <string name="backupErrorMessage">Nie udało się utworzyć pliku backupu.</string>
-    <string name="backupSessionExpiredMessage">Sesja wygasła. Odblokuj aplikację PIN-em i spróbuj ponownie.</string>
     <string name="restoreSuccessTitle">Przywracanie zakończone</string>
-    <string name="restoreErrorTitle">Błąd przywracania</string>
     <string name="restoreErrorMessage">Nie udało się przywrócić danych. Sprawdź, czy plik jest poprawnym backupem CSV z QuietAuth.</string>
     <string name="creatingBackupProgress">Tworzenie backupu…</string>
     <string name="restoringBackupProgress">Przywracanie backupu…</string>
     <string name="backupProcessingHint">Po wybraniu akcji proces uruchomi się na osobnym ekranie.</string>
 
     <string name="tokenNotFound">Nie znaleziono tokenu.</string>
-    <string name="backToTokens">Powrót do tokenów</string>
-    <string name="tokenCode">Kod</string>
-    <string name="codeExpiresIn">Wygasa za</string>
+    <string name="token_details_current_code">Aktualny kod</string>
+    <string name="token_details_field_account">Konto</string>
+    <string name="token_details_field_type">Typ</string>
+    <string name="token_details_field_added">Dodano</string>
+    <string name="token_details_field_in_backup">Istnieje w backupie</string>
+    <string name="token_details_type_totp">TOTP</string>
+    <string name="token_details_not_available">—</string>
+    <string name="token_details_copy_code">Skopiuj kod</string>
+    <string name="token_details_copy_toast">Skopiowano kod</string>
 
     <string name="dangerZoneTitle">Strefa ryzyka</string>
-    <string name="dangerZoneSubtitle">Strefa ryzyka dla lokalnego stanu aplikacji. Używaj tylko do testów.</string>
     <string name="developerResetStorage">Wyczyść cały storage aplikacji</string>
     <string name="developerRemovePin">Usuń PIN</string>
     <string name="developerRemoveBiometrics">Usuń biometrię</string>
@@ -113,9 +99,5 @@
     <string name="developerRemoveBiometricsConfirmMessage">To wyłączy odblokowanie biometryczne dla tej aplikacji.</string>
     <string name="developerConfirmAction">Potwierdź</string>
     <string name="developerActionSuccessTitle">Gotowe</string>
-    <string name="developerActionErrorTitle">Akcja nie powiodła się</string>
-    <string name="developerActionErrorMessage">Nie udało się wykonać akcji. Spróbuj ponownie.</string>
     <string name="developerResetStorageSuccessMessage">Storage aplikacji został wyczyszczony.</string>
-    <string name="developerRemovePinSuccessMessage">PIN został usunięty.</string>
-    <string name="developerRemoveBiometricsSuccessMessage">Odblokowanie biometryczne zostało usunięte.</string>
 </resources>

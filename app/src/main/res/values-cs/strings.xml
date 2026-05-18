@@ -6,23 +6,14 @@
     <string name="onboardingPinHint">PIN je volitelný. Chrání lokální přístup k tokenům na tomto zařízení. Kdykoli ho zapnete v Nastaveních.</string>
     <string name="continueWithoutPin">Pokračovat bez PINu</string>
     <string name="protectWithPin">Chraňte aplikaci PINem</string>
-    <string name="begin">Začít</string>
-    <string name="secureTagline">Bezpečně. Diskrétně. Záměrně stručně.</string>
 
-    <string name="twofaTitle">Vaše 2FA účty</string>
-    <string name="twofaSubtitle">Záznamy autentizátoru se bezpečně načítají z místního šifrovaného úložiště.</string>
-    <string name="add2fa">Přidat 2FA</string>
     <string name="loadingAccounts">Načítání 2FA účtů…</string>
     <string name="emptyAccounts">Zatím žádné 2FA účty. Klepněte na Přidat 2FA a vytvořte první záznam.</string>
 
     <string name="add2faTitle">Přidat nové 2FA</string>
-    <string name="add2faSubtitle">Přidejte údaje autentizátoru a mějte všechny jednorázové kódy na jednom bezpečném místě.</string>
     <string name="serviceName">Název služby</string>
-    <string name="servicePlaceholder">např. GitHub</string>
     <string name="account">Účet</string>
-    <string name="accountPlaceholder">např. dominik.dev</string>
     <string name="secretKey">Tajný klíč</string>
-    <string name="secretPlaceholder">Vložte nastavení klíče</string>
     <string name="save2fa">Uložit 2FA</string>
     <string name="cancel">Zrušit</string>
     <string name="missingFieldsTitle">Chybí údaje</string>
@@ -30,27 +21,18 @@
 
     <string name="qrTitle">Naskenujte QR kód 2FA</string>
     <string name="qrSubtitle">Namiřte fotoaparát na QR kód na obrazovce nastavení služby.</string>
-    <string name="qrPermissionRequired">Pro skenování QR kódů 2FA je potřeba oprávnění fotoaparátu.</string>
-    <string name="enableCamera">Zapnout fotoaparát</string>
     <string name="invalidQrTitle">Neplatný QR</string>
     <string name="invalidQrMessage">Tento QR kód není platný nastavovací kód 2FA.</string>
     <string name="qrAddedTitle">2FA přidáno</string>
     <string name="qrAddedMessage">Účet byl přidán z QR kódu.</string>
     <string name="addManually">Přidat ručně</string>
 
-    <string name="delete">Smazat</string>
     <string name="deleteTokenTitle">Smazat token?</string>
     <string name="deleteTokenMessage">Tento 2FA token bude trvale odstraněn ze zařízení.</string>
     <string name="confirmDelete">Smazat token</string>
 
-    <string name="pinSetupSubtitle">Nastavte čtyřmístný PIN pro přihlášení do aplikace a ochranu tokenů.</string>
-    <string name="pinSetupSubtitleOptional">Vytvořte čtyřmístný PIN pro ochranu přístupu k tokenům na tomto zařízení.</string>
-    <string name="pinVerifyDisableSubtitle">Zadejte PIN pro vypnutí ochrany PINem.</string>
     <string name="pinProtectionDisabledMessage">Ochrana PINem je vypnutá.</string>
     <string name="pinUnlockTitle">Odemknout QuietAuth</string>
-    <string name="pinUnlockSubtitle">Zadejte PIN pro přístup k tokenům.</string>
-    <string name="pinCodePlaceholder">Zadejte 4 číslice</string>
-    <string name="pinConfirmPlaceholder">Zadejte PIN znovu</string>
     <string name="pinInvalidTitle">Neplatný PIN</string>
     <string name="pinInvalidMessage">PIN musí mít přesně 4 číslice.</string>
     <string name="pinMismatchTitle">PIN se neshoduje</string>
@@ -64,11 +46,7 @@
     <string name="biometricUnlockFailedMessage">Biometrické ověření selhalo. Můžete odemknout PINem.</string>
     <string name="unlockingApp">Ověřování přístupu…</string>
 
-    <string name="settingsCta">Nastavení</string>
-    <string name="settingsTitle">Nastavení</string>
-    <string name="settingsHubSubtitle">Zabezpečení, zálohy a pokročilé akce pro místní data.</string>
     <string name="settingsSecurityTitle">Zabezpečení</string>
-    <string name="settingsSecuritySubtitle">PIN a volitelná biometrie určují, kdo může otevřít aplikaci na tomto zařízení.</string>
     <string name="settingsBackupTitle">Záloha</string>
     <string name="settingsBackupSubtitle">Exportujte a obnovujte záznamy jako CSV. Je-li zapnutá ochrana PINem, nejdříve aplikaci odemkněte pro zálohy. Soubor není šifrovaný — chraňte ho.</string>
     <string name="settingsBack">Zpět</string>
@@ -84,24 +62,17 @@
     <string name="createBackup">Exportovat zálohu CSV</string>
     <string name="restoreBackup">Obnovit ze zálohy CSV</string>
     <string name="backupCreatedTitle">Záloha vytvořena</string>
-    <string name="saveBackupDialogTitle">Vyberte místo pro zálohu</string>
     <string name="backupErrorTitle">Záloha selhala</string>
     <string name="backupErrorMessage">Soubor zálohy se nepodařilo vytvořit.</string>
-    <string name="backupSessionExpiredMessage">Relace vypršela. Odemkněte aplikaci PINem a zkuste to znovu.</string>
     <string name="restoreSuccessTitle">Obnova dokončena</string>
-    <string name="restoreErrorTitle">Obnova selhala</string>
     <string name="restoreErrorMessage">Data se nepodařilo obnovit. Ověřte, že soubor je záloha CSV QuietAuth.</string>
     <string name="creatingBackupProgress">Vytváření zálohy…</string>
     <string name="restoringBackupProgress">Obnovování…</string>
     <string name="backupProcessingHint">Po výběru pokračuje proces na samostatné obrazovce.</string>
 
     <string name="tokenNotFound">Token nenalezen.</string>
-    <string name="backToTokens">Zpět na tokeny</string>
-    <string name="tokenCode">Kód</string>
-    <string name="codeExpiresIn">Vyprší za</string>
 
     <string name="dangerZoneTitle">Nebezpečná zóna</string>
-    <string name="dangerZoneSubtitle">Riziková zóna pro místní stav aplikace. Pouze pro testování.</string>
     <string name="developerResetStorage">Smazat veškeré úložiště aplikace</string>
     <string name="developerRemovePin">Odstranit PIN</string>
     <string name="developerRemoveBiometrics">Odstranit biometrii</string>
@@ -113,9 +84,5 @@
     <string name="developerRemoveBiometricsConfirmMessage">Vypne biometrické odemknutí pro tuto aplikaci.</string>
     <string name="developerConfirmAction">Potvrdit</string>
     <string name="developerActionSuccessTitle">Hotovo</string>
-    <string name="developerActionErrorTitle">Akce selhala</string>
-    <string name="developerActionErrorMessage">Akci se nepodařilo dokončit. Zkuste to znovu.</string>
     <string name="developerResetStorageSuccessMessage">Úložiště aplikace bylo smazáno.</string>
-    <string name="developerRemovePinSuccessMessage">PIN byl odstraněn.</string>
-    <string name="developerRemoveBiometricsSuccessMessage">Biometrické odemknutí bylo odstraněno.</string>
 </resources>

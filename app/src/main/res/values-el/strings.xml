@@ -6,23 +6,14 @@
     <string name="onboardingPinHint">Το PIN είναι προαιρετικό. Προστατεύει την τοπική πρόσβαση στα token σε αυτή τη συσκευή. Μπορείτε να το ενεργοποιήσετε οποτεδήποτε από τις Ρυθμίσεις.</string>
     <string name="continueWithoutPin">Συνέχεια χωρίς PIN</string>
     <string name="protectWithPin">Προστασία εφαρμογής με PIN</string>
-    <string name="begin">Έναρξη</string>
-    <string name="secureTagline">Ασφαλές. Διακριτικό. Σκόπιμα ελάχιστο.</string>
 
-    <string name="twofaTitle">Οι λογαριασμοί 2FA σας</string>
-    <string name="twofaSubtitle">Οι καταχωρίσεις του authenticator φορτώνονται με ασφάλεια από την τοπική κρυπτογραφημένη αποθήκευση.</string>
-    <string name="add2fa">Προσθήκη 2FA</string>
     <string name="loadingAccounts">Φόρτωση λογαριασμών 2FA…</string>
     <string name="emptyAccounts">Δεν υπάρχουν ακόμη λογαριασμοί 2FA. Πατήστε Προσθήκη 2FA για την πρώτη καταχώριση.</string>
 
     <string name="add2faTitle">Προσθήκη νέας 2FA</string>
-    <string name="add2faSubtitle">Προσθέστε τα στοιχεία authenticator για να έχετε όλους τους κωδικούς μίας χρήσης σε ένα ασφαλές μέρος.</string>
     <string name="serviceName">Όνομα υπηρεσίας</string>
-    <string name="servicePlaceholder">π.χ. GitHub</string>
     <string name="account">Λογαριασμός</string>
-    <string name="accountPlaceholder">π.χ. dominik.dev</string>
     <string name="secretKey">Μυστικό κλειδί</string>
-    <string name="secretPlaceholder">Επικολλήστε το κλειδί ρύθμισης</string>
     <string name="save2fa">Αποθήκευση 2FA</string>
     <string name="cancel">Ακύρωση</string>
     <string name="missingFieldsTitle">Λείπουν πεδία</string>
@@ -30,27 +21,18 @@
 
     <string name="qrTitle">Σάρωση QR 2FA</string>
     <string name="qrSubtitle">Στοχεύστε την κάμερα στον κωδικό QR από την οθόνη ρύθμισης της υπηρεσίας.</string>
-    <string name="qrPermissionRequired">Απαιτείται άδεια κάμερας για σάρωση κωδικών QR 2FA.</string>
-    <string name="enableCamera">Ενεργοποίηση κάμερας</string>
     <string name="invalidQrTitle">Μη έγκυρο QR</string>
     <string name="invalidQrMessage">Αυτός ο κωδικός QR δεν είναι έγκυρος κωδικός ρύθμισης 2FA.</string>
     <string name="qrAddedTitle">Προστέθηκε 2FA</string>
     <string name="qrAddedMessage">Ο λογαριασμός προστέθηκε από τον κωδικό QR.</string>
     <string name="addManually">Χειροκίνητη προσθήκη</string>
 
-    <string name="delete">Διαγραφή</string>
     <string name="deleteTokenTitle">Διαγραφή token;</string>
     <string name="deleteTokenMessage">Αυτό το token 2FA θα αφαιρεθεί μόνιμα από τη συσκευή.</string>
     <string name="confirmDelete">Διαγραφή token</string>
 
-    <string name="pinSetupSubtitle">Ορίστε PIN 4 ψηφίων για σύνδεση στην εφαρμογή και προστασία των token.</string>
-    <string name="pinSetupSubtitleOptional">Δημιουργήστε PIN 4 ψηφίων για προστασία πρόσβασης στα token σε αυτή τη συσκευή.</string>
-    <string name="pinVerifyDisableSubtitle">Εισαγάγετε το PIN για απενεργοποίηση προστασίας PIN.</string>
     <string name="pinProtectionDisabledMessage">Η προστασία PIN είναι απενεργοποιημένη.</string>
     <string name="pinUnlockTitle">Ξεκλείδωμα QuietAuth</string>
-    <string name="pinUnlockSubtitle">Εισαγάγετε το PIN για πρόσβαση στα token.</string>
-    <string name="pinCodePlaceholder">Εισαγάγετε 4 ψηφία</string>
-    <string name="pinConfirmPlaceholder">Επαναλάβετε το PIN</string>
     <string name="pinInvalidTitle">Μη έγκυρο PIN</string>
     <string name="pinInvalidMessage">Το PIN πρέπει να έχει ακριβώς 4 ψηφία.</string>
     <string name="pinMismatchTitle">Τα PIN δεν ταιριάζουν</string>
@@ -64,11 +46,7 @@
     <string name="biometricUnlockFailedMessage">Η βιομετρική επαλήθευση απέτυχε. Μπορείτε να ξεκλειδώσετε με PIN.</string>
     <string name="unlockingApp">Επαλήθευση πρόσβασης…</string>
 
-    <string name="settingsCta">Ρυθμίσεις</string>
-    <string name="settingsTitle">Ρυθμίσεις</string>
-    <string name="settingsHubSubtitle">Ασφάλεια, αντίγραφα ασφαλείας και προηγμένες ενέργειες για τοπικά δεδομένα.</string>
     <string name="settingsSecurityTitle">Ασφάλεια</string>
-    <string name="settingsSecuritySubtitle">Το PIN και η προαιρετική βιομετρία καθορίζουν ποιος μπορεί να ανοίξει την εφαρμογή σε αυτή τη συσκευή.</string>
     <string name="settingsBackupTitle">Αντίγραφο ασφαλείας</string>
     <string name="settingsBackupSubtitle">Εξαγωγή και επαναφορά καταχωρίσεων ως αρχείο CSV. Εάν η προστασία PIN είναι ενεργή, ξεκλειδώστε πρώτα την εφαρμογή για δημιουργία αντιγράφων. Το αρχείο δεν είναι κρυπτογραφημένο — κρατήστε το ιδιωτικό.</string>
     <string name="settingsBack">Πίσω</string>
@@ -84,24 +62,17 @@
     <string name="createBackup">Εξαγωγή αντιγράφου CSV</string>
     <string name="restoreBackup">Επαναφορά από CSV</string>
     <string name="backupCreatedTitle">Το αντίγραφο δημιουργήθηκε</string>
-    <string name="saveBackupDialogTitle">Επιλέξτε πού θα αποθηκευτεί το αντίγραφο</string>
     <string name="backupErrorTitle">Αποτυχία αντιγράφου</string>
     <string name="backupErrorMessage">Δεν ήταν δυνατή η δημιουργία του αρχείου αντιγράφου.</string>
-    <string name="backupSessionExpiredMessage">Η συνεδρία έληξε. Ξεκλειδώστε την εφαρμογή με PIN και δοκιμάστε ξανά.</string>
     <string name="restoreSuccessTitle">Η επαναφορά ολοκληρώθηκε</string>
-    <string name="restoreErrorTitle">Αποτυχία επαναφοράς</string>
     <string name="restoreErrorMessage">Αδυναμία επαναφοράς δεδομένων. Βεβαιωθείτε ότι το αρχείο είναι αντίγραφο CSV QuietAuth.</string>
     <string name="creatingBackupProgress">Δημιουργία αντιγράφου…</string>
     <string name="restoringBackupProgress">Επαναφορά…</string>
     <string name="backupProcessingHint">Μετά την επιλογή, η διαδικασία συνεχίζεται σε ξεχωριστή οθόνη.</string>
 
     <string name="tokenNotFound">Το token δεν βρέθηκε.</string>
-    <string name="backToTokens">Πίσω στα token</string>
-    <string name="tokenCode">Κωδικός</string>
-    <string name="codeExpiresIn">Λήγει σε</string>
 
     <string name="dangerZoneTitle">Επικίνδυνη ζώνη</string>
-    <string name="dangerZoneSubtitle">Επικίνδυνη ζώνη για την τοπική κατάσταση της εφαρμογής. Μόνο για δοκιμές.</string>
     <string name="developerResetStorage">Επαναφορά όλης της αποθήκευσης εφαρμογής</string>
     <string name="developerRemovePin">Αφαίρεση PIN</string>
     <string name="developerRemoveBiometrics">Αφαίρεση βιομετρίας</string>
@@ -113,9 +84,5 @@
     <string name="developerRemoveBiometricsConfirmMessage">Το βιομετρικό ξεκλείδωμα για αυτή την εφαρμογή θα απενεργοποιηθεί.</string>
     <string name="developerConfirmAction">Επιβεβαίωση</string>
     <string name="developerActionSuccessTitle">Τέλος</string>
-    <string name="developerActionErrorTitle">Η ενέργεια απέτυχε</string>
-    <string name="developerActionErrorMessage">Δεν ήταν δυνατή η ολοκλήρωση της ενέργειας. Δοκιμάστε ξανά.</string>
     <string name="developerResetStorageSuccessMessage">Η αποθήκευση της εφαρμογής επαναφέρθηκε.</string>
-    <string name="developerRemovePinSuccessMessage">Το PIN αφαιρέθηκε.</string>
-    <string name="developerRemoveBiometricsSuccessMessage">Το βιομετρικό ξεκλείδωμα αφαιρέθηκε.</string>
 </resources>

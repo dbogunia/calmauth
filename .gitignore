@@ -13,3 +13,5 @@ local.properties
 !debug.keystore
 .kotlin/
 screenshots-device/
+QuietAuthMMDKotlin.zip
+visualizations/

@@ -1,7 +1,7 @@
 package io.quiet.auth.ui.screens
 
-import androidx.compose.foundation.layout.Spacer
-import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.PaddingValues
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
@@ -11,25 +11,29 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
+import com.mudita.mmd.components.divider.HorizontalDividerMMD
+import com.mudita.mmd.components.lazy.LazyColumnMMD
+import com.mudita.mmd.components.text.TextMMD
 import io.quiet.auth.R
-import io.quiet.auth.ui.components.BackupInfo
+import io.quiet.auth.ui.ActionRow
+import io.quiet.auth.ui.SectionHeader
 import io.quiet.auth.ui.components.ConfirmActionSheet
-import io.quiet.auth.ui.components.QuietScaffold
+import io.quiet.auth.ui.theme.Ink
+import io.quiet.auth.ui.theme.QuietDivider
 import io.quiet.auth.ui.viewmodel.PinViewModel
 import io.quiet.auth.ui.viewmodel.sessionReadyForSensitiveActions
-import io.quiet.auth.ui.patterns.RestoreFlow
 
 @Composable
 fun SettingsBackupScreen(
     pinViewModel: PinViewModel,
-    onBack: () -> Unit,
     onCreateBackup: () -> Unit,
     onRestoreBackup: () -> Unit,
 ) {
     val pin by pinViewModel.state.collectAsState()
     var showSessionDialog by remember { mutableStateOf(false) }
 
-    fun ensureSessionReady(titleRes: Int): Boolean {
+    fun ensureSessionReady(): Boolean {
         if (!pin.sessionReadyForSensitiveActions) {
             showSessionDialog = true
             return false
@@ -37,23 +41,30 @@ fun SettingsBackupScreen(
         return true
     }
 
-    QuietScaffold(
-        title = stringResource(R.string.settingsBackupTitle),
-        subtitle = stringResource(R.string.settingsBackupSubtitle),
-        bottomBar = { io.quiet.auth.ui.components.QuietBottomActions(
-            primaryLabel = stringResource(R.string.settingsBack),
-            onPrimaryClick = onBack,
-        ) },
+    LazyColumnMMD(
+        modifier = Modifier.fillMaxSize(),
+        contentPadding = PaddingValues(horizontal = 16.dp, vertical = 16.dp),
     ) {
-        Spacer(Modifier.height(12.dp))
-        RestoreFlow(
-            createBackupLabel = stringResource(R.string.createBackup),
-            restoreBackupLabel = stringResource(R.string.restoreBackup),
-            onCreateBackup = { if (ensureSessionReady(R.string.backupErrorTitle)) onCreateBackup() },
-            onRestoreBackup = { if (ensureSessionReady(R.string.restoreErrorTitle)) onRestoreBackup() },
-        )
-        Spacer(Modifier.height(12.dp))
-        BackupInfo(text = stringResource(R.string.backupProcessingHint))
+        item { SectionHeader(stringResource(R.string.settingsBackupTitle)) }
+        item {
+            ActionRow(stringResource(R.string.createBackup)) {
+                if (ensureSessionReady()) onCreateBackup()
+            }
+        }
+        item {
+            ActionRow(stringResource(R.string.restoreBackup)) {
+                if (ensureSessionReady()) onRestoreBackup()
+            }
+        }
+        item { SectionHeader(stringResource(R.string.settingsBackupSubtitle)) }
+        item {
+            TextMMD(
+                stringResource(R.string.backupProcessingHint),
+                fontSize = 16.sp,
+                color = Ink,
+            )
+            HorizontalDividerMMD(color = QuietDivider)
+        }
     }
 
     if (showSessionDialog) {

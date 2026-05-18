@@ -6,23 +6,14 @@
     <string name="onboardingPinHint">Is roghnach PIN. Cosnaíonn sé rochtain áitiúil ar do thicéid ar an ngléas seo. Is féidir é a chasadh air am ar bith i Socruithe.</string>
     <string name="continueWithoutPin">Lean ar aghaidh gan PIN</string>
     <string name="protectWithPin">Cosain an aip le PIN</string>
-    <string name="begin">Tosaigh</string>
-    <string name="secureTagline">Slán. Ciúin. Íosta go feallsúnach.</string>
 
-    <string name="twofaTitle">Do chuntais 2FA</string>
-    <string name="twofaSubtitle">Lódáiltear do ghiorraitheoir iontaofa go slán ó stóráil áitiúil chriptithe.</string>
-    <string name="add2fa">Cuir 2FA leis</string>
     <string name="loadingAccounts">Do chuntais 2FA á lódáil…</string>
     <string name="emptyAccounts">Níl aon chuntais 2FA fós. Tapáil Cuir 2FA leis chun do chéad iontráil a chruthú.</string>
 
     <string name="add2faTitle">Cuir 2FA nua leis</string>
-    <string name="add2faSubtitle">Cuir sonraí do fhíordheimhnitheora leis chun gach cód aonuaire a choinneáil in aon áit shlán amháin.</string>
     <string name="serviceName">Ainm na seirbhíse</string>
-    <string name="servicePlaceholder">m.sh. GitHub</string>
     <string name="account">Cuntas</string>
-    <string name="accountPlaceholder">m.sh. dominik.dev</string>
     <string name="secretKey">Eochair rúnda</string>
-    <string name="secretPlaceholder">Greamaigh eochair socraithe</string>
     <string name="save2fa">Sábháil 2FA</string>
     <string name="cancel">Cealaigh</string>
     <string name="missingFieldsTitle">Réimsí ar iarraidh</string>
@@ -30,27 +21,18 @@
 
     <string name="qrTitle">Scanadh cóid QR 2FA</string>
     <string name="qrSubtitle">Dírigh do cheamara ar an gcód QR ó scáileán socraithe na seirbhíse.</string>
-    <string name="qrPermissionRequired">Tá cead ceamara ag teastáil chun cóid QR 2FA a scanadh.</string>
-    <string name="enableCamera">Cumasaigh ceamara</string>
     <string name="invalidQrTitle">QR neamhbhailí</string>
     <string name="invalidQrMessage">Níl an cóid QR seo mar chód socraithe bailí 2FA.</string>
     <string name="qrAddedTitle">2FA curtha leis</string>
     <string name="qrAddedMessage">Cuireadh an cuntas leis ón gcód QR.</string>
     <string name="addManually">Cuir leis de láimh</string>
 
-    <string name="delete">Scrios</string>
     <string name="deleteTokenTitle">Scrios ticéad?</string>
     <string name="deleteTokenMessage">Bainfear an ticéad 2FA seo go buan ó do ghléas.</string>
     <string name="confirmDelete">Scrios ticéad</string>
 
-    <string name="pinSetupSubtitle">Socraigh PIN 4-digit chun síniú isteach na haipe agus cosaint rochtana ar do thicéid.</string>
-    <string name="pinSetupSubtitleOptional">Cruthaigh PIN 4-digit chun rochtain ar do thicéid ar an ngléas seo a chosaint.</string>
-    <string name="pinVerifyDisableSubtitle">Iontráil do PIN chun cosaint PIN a mhúchadh.</string>
     <string name="pinProtectionDisabledMessage">Tá cosaint PIN as.</string>
     <string name="pinUnlockTitle">Díghlasáil QuietAuth</string>
-    <string name="pinUnlockSubtitle">Iontráil do PIN chun rochtain a fháil ar do thicéid.</string>
-    <string name="pinCodePlaceholder">Iontráil 4 dhigit</string>
-    <string name="pinConfirmPlaceholder">Athiontráil do PIN</string>
     <string name="pinInvalidTitle">PIN neamhbhailí</string>
     <string name="pinInvalidMessage">Caithfidh an PIN a bheith déanta as go díreach 4 dhigit.</string>
     <string name="pinMismatchTitle">Ní hionann an PIN</string>
@@ -64,11 +46,7 @@
     <string name="biometricUnlockFailedMessage">Theip ar fhíordheimhniú bithmhéadrach. Is féidir leat díghlasáil le PIN.</string>
     <string name="unlockingApp">Rochtán á fhíordheimhniú…</string>
 
-    <string name="settingsCta">Socruithe</string>
-    <string name="settingsTitle">Socruithe</string>
-    <string name="settingsHubSubtitle">Slándáil, cúltacaí agus gníomhartha ardrochtana do shonraí áitiúla.</string>
     <string name="settingsSecurityTitle">Slándáil</string>
-    <string name="settingsSecuritySubtitle">Rialaíonn PIN agus bitheolaíocht roghnach cé atá in ann an aip a oscailt ar an bhfeiste seo.</string>
     <string name="settingsBackupTitle">Cúltaca</string>
     <string name="settingsBackupSubtitle">Easpórtáil agus athchóirigh iontrálacha mar chomhad CSV. Nuair atá cosaint PIN air, díghlasáil an aip ar dtús don chúltaca. Níl an comhad cúltaca criptithe — coinnigh príobháideach é.</string>
     <string name="settingsBack">Ar ais</string>
@@ -84,24 +62,17 @@
     <string name="createBackup">Easpórtáil cúltaca CSV</string>
     <string name="restoreBackup">Athchóirigh ó chúltaca CSV</string>
     <string name="backupCreatedTitle">Cruthaíodh cúltaca</string>
-    <string name="saveBackupDialogTitle">Roghnaigh cá háit leis an gcúltaca a shábháil</string>
     <string name="backupErrorTitle">Theip ar an gcúltaca</string>
     <string name="backupErrorMessage">Níorbh fhéidir comhad cúltaca a chruthú.</string>
-    <string name="backupSessionExpiredMessage">Chuaigh an seisiún in éag. Díghlasáil an aip le PIN agus bain triail eile as.</string>
     <string name="restoreSuccessTitle">Athchóiriú críochnaithe</string>
-    <string name="restoreErrorTitle">Theip ar athchóiriú</string>
     <string name="restoreErrorMessage">Níorbh fhéidir sonraí a athchóiriú. Dearbháil gur cúltaca CSV bailí QuietAuth é an comhad.</string>
     <string name="creatingBackupProgress">Cúltaca á chruthú…</string>
     <string name="restoringBackupProgress">Cúltaca á athchóiriú…</string>
     <string name="backupProcessingHint">Tar éis an ghnímh a roghnú, ritheann an próiseas ar scáileán ar leith.</string>
 
     <string name="tokenNotFound">Níor aimsíodh ticéad.</string>
-    <string name="backToTokens">Ar ais go dtí na ticéid</string>
-    <string name="tokenCode">Cód</string>
-    <string name="codeExpiresIn">In éag i</string>
 
     <string name="dangerZoneTitle">Ceantar contúirte</string>
-    <string name="dangerZoneSubtitle">Ceantar contúirte don staid áitiúil na haipe. Ní úsáid ach le haghaidh tástála.</string>
     <string name="developerResetStorage">Athshocraigh stóráil iomlán na haipe</string>
     <string name="developerRemovePin">Bain PIN</string>
     <string name="developerRemoveBiometrics">Bain bithmhéadracht</string>
@@ -113,9 +84,5 @@
     <string name="developerRemoveBiometricsConfirmMessage">Múchann sé seo díghlasáil bithmhéadrach don aip seo.</string>
     <string name="developerConfirmAction">Deimhnigh</string>
     <string name="developerActionSuccessTitle">Déanta</string>
-    <string name="developerActionErrorTitle">Theip ar an ngníomh</string>
-    <string name="developerActionErrorMessage">Níorbh fhéidir an gníomh seo a chríochnú. Bain triail eile as.</string>
     <string name="developerResetStorageSuccessMessage">Athshocraíodh stóráil iomlán na haipe.</string>
-    <string name="developerRemovePinSuccessMessage">Baineadh an PIN.</string>
-    <string name="developerRemoveBiometricsSuccessMessage">Baineadh díghlasáil bithmhéadrach.</string>
 </resources>

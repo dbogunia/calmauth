@@ -6,23 +6,14 @@
     <string name="onboardingPinHint">PIN er valgfritt. Den beskytter lokal tilgang til tokenene dine på denne enheten. Du kan slå den på når som helst i Innstillinger.</string>
     <string name="continueWithoutPin">Fortsett uten PIN</string>
     <string name="protectWithPin">Beskytt appen med PIN</string>
-    <string name="begin">Kom i gang</string>
-    <string name="secureTagline">Trygt. Diskret. Bevisst minimalt.</string>
 
-    <string name="twofaTitle">2FA-kontoene dine</string>
-    <string name="twofaSubtitle">Autentisatorene dine lastes trygt fra lokal kryptert lagring.</string>
-    <string name="add2fa">Legg til 2FA</string>
     <string name="loadingAccounts">Laster 2FA-kontoer…</string>
     <string name="emptyAccounts">Ingen 2FA-kontoer ennå. Trykk Legg til 2FA for å opprette første oppføring.</string>
 
     <string name="add2faTitle">Legg til ny 2FA</string>
-    <string name="add2faSubtitle">Legg til autentisatordetaljene dine slik at alle engangskoder er på ett trygt sted.</string>
     <string name="serviceName">Tjenestenavn</string>
-    <string name="servicePlaceholder">f.eks. GitHub</string>
     <string name="account">Konto</string>
-    <string name="accountPlaceholder">f.eks. dominik.dev</string>
     <string name="secretKey">Hemmelig nøkkel</string>
-    <string name="secretPlaceholder">Lim inn oppsettnøkkel</string>
     <string name="save2fa">Lagre 2FA</string>
     <string name="cancel">Avbryt</string>
     <string name="missingFieldsTitle">Manglende felt</string>
@@ -30,27 +21,18 @@
 
     <string name="qrTitle">Skann 2FA QR-kode</string>
     <string name="qrSubtitle">Ret kameraet mot QR-koden fra tjenestens oppsettsskjerm.</string>
-    <string name="qrPermissionRequired">Kameratillatelse kreves for å skanne 2FA QR-koder.</string>
-    <string name="enableCamera">Slå på kamera</string>
     <string name="invalidQrTitle">Ugyldig QR</string>
     <string name="invalidQrMessage">Denne QR-koden er ikke en gyldig 2FA-oppsettskode.</string>
     <string name="qrAddedTitle">2FA lagt til</string>
     <string name="qrAddedMessage">Kontoen ble lagt til fra QR-koden.</string>
     <string name="addManually">Legg til manuelt</string>
 
-    <string name="delete">Slett</string>
     <string name="deleteTokenTitle">Slette token?</string>
     <string name="deleteTokenMessage">Denne 2FA-tokenen fjernes permanent fra enheten din.</string>
     <string name="confirmDelete">Slett token</string>
 
-    <string name="pinSetupSubtitle">Angi en firesifret PIN for appinnlogging og beskyttelse av tilgang til tokenene.</string>
-    <string name="pinSetupSubtitleOptional">Opprett en firesifret PIN for å beskytte tilgang til tokenene på denne enheten.</string>
-    <string name="pinVerifyDisableSubtitle">Skriv inn PIN for å slå av PIN-beskyttelse.</string>
     <string name="pinProtectionDisabledMessage">PIN-beskyttelse er av.</string>
     <string name="pinUnlockTitle">Lås opp QuietAuth</string>
-    <string name="pinUnlockSubtitle">Skriv inn PIN for å få tilgang til tokenene dine.</string>
-    <string name="pinCodePlaceholder">Skriv inn 4 siffer</string>
-    <string name="pinConfirmPlaceholder">Skriv inn PIN på nytt</string>
     <string name="pinInvalidTitle">Ugyldig PIN</string>
     <string name="pinInvalidMessage">PIN må bestå av nøyaktig 4 siffer.</string>
     <string name="pinMismatchTitle">PIN stemmer ikke</string>
@@ -64,11 +46,7 @@
     <string name="biometricUnlockFailedMessage">Biometrisk verifisering mislyktes. Du kan låse opp med PIN.</string>
     <string name="unlockingApp">Verifiserer tilgang…</string>
 
-    <string name="settingsCta">Innstillinger</string>
-    <string name="settingsTitle">Innstillinger</string>
-    <string name="settingsHubSubtitle">Sikkerhet, sikkerhetskopier og avanserte handlinger for lokale data.</string>
     <string name="settingsSecurityTitle">Sikkerhet</string>
-    <string name="settingsSecuritySubtitle">PIN og valgfri biometri styrer hvem som kan åpne appen på denne enheten.</string>
     <string name="settingsBackupTitle">Sikkerhetskopi</string>
     <string name="settingsBackupSubtitle">Eksporter og gjenopprett oppføringer som CSV-fil. Når PIN-beskyttelse er på, lås opp appen først. Sikkerhetskopien er ikke kryptert — hold den privat.</string>
     <string name="settingsBack">Tilbake</string>
@@ -84,24 +62,17 @@
     <string name="createBackup">Eksporter CSV-sikkerhetskopi</string>
     <string name="restoreBackup">Gjenopprett fra CSV-sikkerhetskopi</string>
     <string name="backupCreatedTitle">Sikkerhetskopi opprettet</string>
-    <string name="saveBackupDialogTitle">Velg hvor sikkerhetskopien skal lagres</string>
     <string name="backupErrorTitle">Sikkerhetskopi mislyktes</string>
     <string name="backupErrorMessage">Kunne ikke opprette sikkerhetskopifil.</string>
-    <string name="backupSessionExpiredMessage">Økten utløp. Lås opp appen med PIN og prøv igjen.</string>
     <string name="restoreSuccessTitle">Gjenoppretting fullført</string>
-    <string name="restoreErrorTitle">Gjenoppretting mislyktes</string>
     <string name="restoreErrorMessage">Kunne ikke gjenopprette data. Kontroller at filen er en gyldig QuietAuth CSV-sikkerhetskopi.</string>
     <string name="creatingBackupProgress">Oppretter sikkerhetskopi…</string>
     <string name="restoringBackupProgress">Gjenoppretter sikkerhetskopi…</string>
     <string name="backupProcessingHint">Etter at du velger handlingen, kjører prosessen på en egen skjerm.</string>
 
     <string name="tokenNotFound">Token ikke funnet.</string>
-    <string name="backToTokens">Tilbake til token</string>
-    <string name="tokenCode">Kode</string>
-    <string name="codeExpiresIn">Utløper om</string>
 
     <string name="dangerZoneTitle">Faresonen</string>
-    <string name="dangerZoneSubtitle">Faresonen for lokal appstatus. Kun til testing.</string>
     <string name="developerResetStorage">Tilbakestill all applagring</string>
     <string name="developerRemovePin">Fjern PIN</string>
     <string name="developerRemoveBiometrics">Fjern biometri</string>
@@ -113,9 +84,5 @@
     <string name="developerRemoveBiometricsConfirmMessage">Dette slår av biometrisk opplåsing for denne appen.</string>
     <string name="developerConfirmAction">Bekreft</string>
     <string name="developerActionSuccessTitle">Ferdig</string>
-    <string name="developerActionErrorTitle">Handling mislyktes</string>
-    <string name="developerActionErrorMessage">Kunne ikke fullføre handlingen. Prøv igjen.</string>
     <string name="developerResetStorageSuccessMessage">All applagring er tilbakestilt.</string>
-    <string name="developerRemovePinSuccessMessage">PIN er fjernet.</string>
-    <string name="developerRemoveBiometricsSuccessMessage">Biometrisk opplåsing er fjernet.</string>
 </resources>

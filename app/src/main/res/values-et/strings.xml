@@ -6,23 +6,14 @@
     <string name="onboardingPinHint">PIN-kood on valikuline. See kaitseb kohalikku juurdepääsu sinu märkidele sellel seadmel. Saad selle igal ajal Seadetes sisse lülitada.</string>
     <string name="continueWithoutPin">Jätka ilma PIN-koodita</string>
     <string name="protectWithPin">Kaitse rakendust PIN-koodiga</string>
-    <string name="begin">Alusta</string>
-    <string name="secureTagline">Turvaline. Vaoshoidev. Teadlikult minimaalne.</string>
 
-    <string name="twofaTitle">Sinu 2FA kontod</string>
-    <string name="twofaSubtitle">Sinu autentikaatori kirjed laaditakse turvaliselt kohalikust krüptitud salvest.</string>
-    <string name="add2fa">Lisa 2FA</string>
     <string name="loadingAccounts">Laadin 2FA kontosid…</string>
     <string name="emptyAccounts">2FA kontosid veel pole. Puuduta Lisa 2FA, et luua esimene kirje.</string>
 
     <string name="add2faTitle">Lisa uus 2FA</string>
-    <string name="add2faSubtitle">Lisa autentikaatori andmed, et kõik ühekordsed koodid oleksid ühes turvalises kohas.</string>
     <string name="serviceName">Teenuse nimi</string>
-    <string name="servicePlaceholder">nt GitHub</string>
     <string name="account">Konto</string>
-    <string name="accountPlaceholder">nt dominik.dev</string>
     <string name="secretKey">Salajane võti</string>
-    <string name="secretPlaceholder">Kleebi seadistusvõti</string>
     <string name="save2fa">Salvesta 2FA</string>
     <string name="cancel">Tühista</string>
     <string name="missingFieldsTitle">Puuduvad väljad</string>
@@ -30,27 +21,18 @@
 
     <string name="qrTitle">Skanni 2FA QR-koodi</string>
     <string name="qrSubtitle">Suuna kaamera teenuse seadistusekraani QR-koodi poole.</string>
-    <string name="qrPermissionRequired">Kaamera luba on vajalik 2FA QR-koodide skannimiseks.</string>
-    <string name="enableCamera">Luba kaamera</string>
     <string name="invalidQrTitle">Vigane QR</string>
     <string name="invalidQrMessage">See QR-kood ei ole kehtiv 2FA seadistuskood.</string>
     <string name="qrAddedTitle">2FA lisatud</string>
     <string name="qrAddedMessage">Konto lisati QR-koodist.</string>
     <string name="addManually">Lisa käsitsi</string>
 
-    <string name="delete">Kustuta</string>
     <string name="deleteTokenTitle">Kustuta märk?</string>
     <string name="deleteTokenMessage">See 2FA märk eemaldatakse seadmest jäädavalt.</string>
     <string name="confirmDelete">Kustuta märk</string>
 
-    <string name="pinSetupSubtitle">Määra 4-kohaline PIN rakenduse avamiseks ja märkidele juurdepääsu kaitsmiseks.</string>
-    <string name="pinSetupSubtitleOptional">Loo 4-kohaline PIN, et kaitsta märkidele juurdepääsu sellel seadmel.</string>
-    <string name="pinVerifyDisableSubtitle">Sisesta PIN, et PIN-kaitse välja lülitada.</string>
     <string name="pinProtectionDisabledMessage">PIN-kaitse on välja lülitatud.</string>
     <string name="pinUnlockTitle">Ava QuietAuth lukust</string>
-    <string name="pinUnlockSubtitle">Sisesta PIN märkidele juurdepääsuks.</string>
-    <string name="pinCodePlaceholder">Sisesta 4 numbrit</string>
-    <string name="pinConfirmPlaceholder">Sisesta PIN uuesti</string>
     <string name="pinInvalidTitle">Vale PIN</string>
     <string name="pinInvalidMessage">PIN peab sisaldama täpselt 4 numbrit.</string>
     <string name="pinMismatchTitle">PIN ei ühti</string>
@@ -64,11 +46,7 @@
     <string name="biometricUnlockFailedMessage">Biomeetriline kinnitamine ebaõnnestus. Saad avada PIN-koodiga.</string>
     <string name="unlockingApp">Kinnitan juurdepääsu…</string>
 
-    <string name="settingsCta">Seaded</string>
-    <string name="settingsTitle">Seaded</string>
-    <string name="settingsHubSubtitle">Turvalisus, varukoopiad ja täpsemad toimingud kohalike andmetega.</string>
     <string name="settingsSecurityTitle">Turvalisus</string>
-    <string name="settingsSecuritySubtitle">PIN ja valikuline biomeetria määravad, kes saab sellel seadmel rakendust avada.</string>
     <string name="settingsBackupTitle">Varukoopia</string>
     <string name="settingsBackupSubtitle">Ekspordi ja taasta kirjed CSV-failina. Kui PIN-kaitse on sees, ava esmalt rakendus. Varukoopia ei ole krüptitud — hoia seda privaatselt.</string>
     <string name="settingsBack">Tagasi</string>
@@ -84,24 +62,17 @@
     <string name="createBackup">Ekspordi CSV varukoopia</string>
     <string name="restoreBackup">Taasta CSV varukoopiast</string>
     <string name="backupCreatedTitle">Varukoopia loodud</string>
-    <string name="saveBackupDialogTitle">Vali varukoopia salvestamise koht</string>
     <string name="backupErrorTitle">Varukoopia nurjus</string>
     <string name="backupErrorMessage">Varukoopia faili ei õnnestunud luua.</string>
-    <string name="backupSessionExpiredMessage">Seanss aegus. Ava rakendus PIN-iga ja proovi uuesti.</string>
     <string name="restoreSuccessTitle">Taastamine lõpetatud</string>
-    <string name="restoreErrorTitle">Taastamine nurjus</string>
     <string name="restoreErrorMessage">Andmeid ei õnnestunud taastada. Kontrolli, et fail oleks kehtiv QuietAuth CSV varukoopia.</string>
     <string name="creatingBackupProgress">Loon varukoopiat…</string>
     <string name="restoringBackupProgress">Taastan varukoopiat…</string>
     <string name="backupProcessingHint">Pärast toimingu valikut käivitub protsess eraldi ekraanil.</string>
 
     <string name="tokenNotFound">Märki ei leitud.</string>
-    <string name="backToTokens">Tagasi märkide juurde</string>
-    <string name="tokenCode">Kood</string>
-    <string name="codeExpiresIn">Aegub</string>
 
     <string name="dangerZoneTitle">Ohtlik tsoon</string>
-    <string name="dangerZoneSubtitle">Ohtlik tsoon kohaliku rakenduse oleku jaoks. Ainult testimiseks.</string>
     <string name="developerResetStorage">Lähtesta kogu rakenduse salvest</string>
     <string name="developerRemovePin">Eemalda PIN</string>
     <string name="developerRemoveBiometrics">Eemalda biomeetria</string>
@@ -113,9 +84,5 @@
     <string name="developerRemoveBiometricsConfirmMessage">See lülitab biomeetrilise avamise selle rakenduse jaoks välja.</string>
     <string name="developerConfirmAction">Kinnita</string>
     <string name="developerActionSuccessTitle">Valmis</string>
-    <string name="developerActionErrorTitle">Toiming nurjus</string>
-    <string name="developerActionErrorMessage">Toimingut ei õnnestunud lõpetada. Proovi uuesti.</string>
     <string name="developerResetStorageSuccessMessage">Kogu rakenduse salvest on lähtestatud.</string>
-    <string name="developerRemovePinSuccessMessage">PIN on eemaldatud.</string>
-    <string name="developerRemoveBiometricsSuccessMessage">Biomeetriline avamine on eemaldatud.</string>
 </resources>

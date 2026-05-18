@@ -6,23 +6,14 @@
     <string name="onboardingPinHint">Een pincode is optioneel. Die beschermt lokale toegang tot je tokens op dit apparaat. Je kunt hem altijd inschakelen in Instellingen.</string>
     <string name="continueWithoutPin">Doorgaan zonder pincode</string>
     <string name="protectWithPin">App beschermen met pincode</string>
-    <string name="begin">Beginnen</string>
-    <string name="secureTagline">Veilig. Discrete. Bewust minimaal.</string>
 
-    <string name="twofaTitle">Je 2FA-accounts</string>
-    <string name="twofaSubtitle">Je authenticator-items worden veilig geladen uit lokale versleutelde opslag.</string>
-    <string name="add2fa">2FA toevoegen</string>
     <string name="loadingAccounts">2FA-accounts laden…</string>
     <string name="emptyAccounts">Nog geen 2FA-accounts. Tik op 2FA toevoegen om je eerste item aan te maken.</string>
 
     <string name="add2faTitle">Nieuwe 2FA toevoegen</string>
-    <string name="add2faSubtitle">Voeg je authenticatorgegevens toe om alle eenmalige codes op één veilige plek te hebben.</string>
     <string name="serviceName">Servicenaam</string>
-    <string name="servicePlaceholder">bijv. GitHub</string>
     <string name="account">Account</string>
-    <string name="accountPlaceholder">bijv. dominik.dev</string>
     <string name="secretKey">Geheime sleutel</string>
-    <string name="secretPlaceholder">Configuratiesleutel plakken</string>
     <string name="save2fa">2FA opslaan</string>
     <string name="cancel">Annuleren</string>
     <string name="missingFieldsTitle">Ontbrekende velden</string>
@@ -30,27 +21,18 @@
 
     <string name="qrTitle">2FA-QR-code scannen</string>
     <string name="qrSubtitle">Richt je camera op de QR-code van het configuratiescherm van de dienst.</string>
-    <string name="qrPermissionRequired">Cameratoegang is nodig om 2FA-QR-codes te scannen.</string>
-    <string name="enableCamera">Camera inschakelen</string>
     <string name="invalidQrTitle">Ongeldige QR</string>
     <string name="invalidQrMessage">Deze QR-code is geen geldige 2FA-configuratiecode.</string>
     <string name="qrAddedTitle">2FA toegevoegd</string>
     <string name="qrAddedMessage">Account is toegevoegd vanuit de QR-code.</string>
     <string name="addManually">Handmatig toevoegen</string>
 
-    <string name="delete">Verwijderen</string>
     <string name="deleteTokenTitle">Token verwijderen?</string>
     <string name="deleteTokenMessage">Deze 2FA-token wordt permanent van je apparaat verwijderd.</string>
     <string name="confirmDelete">Token verwijderen</string>
 
-    <string name="pinSetupSubtitle">Stel een pincode van 4 cijfers in voor aanmelding en om je tokens te beschermen.</string>
-    <string name="pinSetupSubtitleOptional">Maak een pincode van 4 cijfers om toegang tot je tokens op dit apparaat te beschermen.</string>
-    <string name="pinVerifyDisableSubtitle">Voer je pincode in om pincodebeveiliging uit te zetten.</string>
     <string name="pinProtectionDisabledMessage">Pincodebeveiliging staat uit.</string>
     <string name="pinUnlockTitle">QuietAuth ontgrendelen</string>
-    <string name="pinUnlockSubtitle">Voer je pincode in om je tokens te openen.</string>
-    <string name="pinCodePlaceholder">Voer 4 cijfers in</string>
-    <string name="pinConfirmPlaceholder">Pincode opnieuw invoeren</string>
     <string name="pinInvalidTitle">Ongeldige pincode</string>
     <string name="pinInvalidMessage">De pincode moet precies 4 cijfers zijn.</string>
     <string name="pinMismatchTitle">Pincodes komen niet overeen</string>
@@ -64,11 +46,7 @@
     <string name="biometricUnlockFailedMessage">Biometrische verificatie mislukt. Je kunt ontgrendelen met pincode.</string>
     <string name="unlockingApp">Toegang controleren…</string>
 
-    <string name="settingsCta">Instellingen</string>
-    <string name="settingsTitle">Instellingen</string>
-    <string name="settingsHubSubtitle">Beveiliging, back-ups en geavanceerde acties voor lokale gegevens.</string>
     <string name="settingsSecurityTitle">Beveiliging</string>
-    <string name="settingsSecuritySubtitle">PIN en optionele biometrie bepalen wie de app op dit apparaat kan openen.</string>
     <string name="settingsBackupTitle">Back-up</string>
     <string name="settingsBackupSubtitle">Exporteer en herstel items als CSV-bestand. Als pincodebeveiliging aan staat, ontgrendel eerst de app voor back-ups. Het bestand is niet versleuteld — houd het privé.</string>
     <string name="settingsBack">Terug</string>
@@ -84,24 +62,17 @@
     <string name="createBackup">CSV-back-up exporteren</string>
     <string name="restoreBackup">Herstellen vanuit CSV-back-up</string>
     <string name="backupCreatedTitle">Back-up gemaakt</string>
-    <string name="saveBackupDialogTitle">Kies waar je de back-up opslaat</string>
     <string name="backupErrorTitle">Back-up mislukt</string>
     <string name="backupErrorMessage">Back-upbestand kon niet worden gemaakt.</string>
-    <string name="backupSessionExpiredMessage">Sessie verlopen. Ontgrendel de app met je pincode en probeer opnieuw.</string>
     <string name="restoreSuccessTitle">Herstel voltooid</string>
-    <string name="restoreErrorTitle">Herstel mislukt</string>
     <string name="restoreErrorMessage">Gegevens konden niet worden hersteld. Controleer of het bestand een QuietAuth CSV-back-up is.</string>
     <string name="creatingBackupProgress">Back-up maken…</string>
     <string name="restoringBackupProgress">Herstellen…</string>
     <string name="backupProcessingHint">Na je keuze gaat het proces verder op een apart scherm.</string>
 
     <string name="tokenNotFound">Token niet gevonden.</string>
-    <string name="backToTokens">Terug naar tokens</string>
-    <string name="tokenCode">Code</string>
-    <string name="codeExpiresIn">Verloopt over</string>
 
     <string name="dangerZoneTitle">Gevarenzone</string>
-    <string name="dangerZoneSubtitle">Gevarenzone voor lokale app-status. Alleen voor testen.</string>
     <string name="developerResetStorage">Alle app-opslag wissen</string>
     <string name="developerRemovePin">Pincode verwijderen</string>
     <string name="developerRemoveBiometrics">Biometrie verwijderen</string>
@@ -113,9 +84,5 @@
     <string name="developerRemoveBiometricsConfirmMessage">Biometrisch ontgrendelen wordt uitgeschakeld voor deze app.</string>
     <string name="developerConfirmAction">Bevestigen</string>
     <string name="developerActionSuccessTitle">Klaar</string>
-    <string name="developerActionErrorTitle">Actie mislukt</string>
-    <string name="developerActionErrorMessage">Deze actie kon niet worden uitgevoerd. Probeer opnieuw.</string>
     <string name="developerResetStorageSuccessMessage">Alle app-opslag is gewist.</string>
-    <string name="developerRemovePinSuccessMessage">Pincode is verwijderd.</string>
-    <string name="developerRemoveBiometricsSuccessMessage">Biometrisch ontgrendelen is verwijderd.</string>
 </resources>

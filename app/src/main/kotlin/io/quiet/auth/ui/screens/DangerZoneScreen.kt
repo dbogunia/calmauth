@@ -1,24 +1,29 @@
 package io.quiet.auth.ui.screens
 
-import android.app.AlertDialog
-import androidx.annotation.StringRes
-import androidx.compose.foundation.layout.Spacer
-import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.height
-import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.Text
+import androidx.compose.foundation.layout.PaddingValues
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
+import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.platform.LocalContext
-import androidx.compose.ui.text.style.TextAlign
-import androidx.compose.ui.unit.dp
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.unit.dp
+import com.mudita.mmd.components.lazy.LazyColumnMMD
 import io.quiet.auth.R
 import io.quiet.auth.data.PinRepository
-import io.quiet.auth.ui.components.QuietBottomActions
-import io.quiet.auth.ui.components.QuietScaffold
+import io.quiet.auth.ui.ActionRow
+import io.quiet.auth.ui.SectionHeader
+import io.quiet.auth.ui.components.ConfirmActionSheet
 import io.quiet.auth.ui.viewmodel.PinViewModel
 import io.quiet.auth.ui.viewmodel.TwoFAViewModel
+
+private sealed class PendingDangerAction {
+    data object ResetStorage : PendingDangerAction()
+    data object RemovePin : PendingDangerAction()
+    data object RemoveBiometrics : PendingDangerAction()
+}
 
 @Composable
 fun DangerZoneScreen(
@@ -27,90 +32,89 @@ fun DangerZoneScreen(
     pinRepository: PinRepository,
     onBack: () -> Unit,
     onAfterReset: () -> Unit,
-    @StringRes backButtonLabelRes: Int,
 ) {
-    val context = LocalContext.current
+    var pending by remember { mutableStateOf<PendingDangerAction?>(null) }
+    var successNavigate by remember { mutableStateOf(false) }
 
-    fun confirm(
-        titleRes: Int,
-        messageRes: Int,
-        successMessageRes: Int,
-        action: () -> Boolean,
-        navigateAfter: Boolean,
+    LazyColumnMMD(
+        modifier = Modifier.fillMaxSize(),
+        contentPadding = PaddingValues(horizontal = 16.dp, vertical = 16.dp),
     ) {
-        AlertDialog.Builder(context)
-            .setTitle(titleRes)
-            .setMessage(messageRes)
-            .setNegativeButton(R.string.cancel, null)
-            .setPositiveButton(R.string.developerConfirmAction) { _, _ ->
-                val ok = action()
-                if (ok) {
-                    AlertDialog.Builder(context)
-                        .setTitle(R.string.developerActionSuccessTitle)
-                        .setMessage(successMessageRes)
-                        .setPositiveButton(android.R.string.ok) { _, _ ->
-                            if (navigateAfter) onAfterReset()
-                        }
-                        .setOnDismissListener { if (navigateAfter) onAfterReset() }
-                        .show()
-                } else {
-                    AlertDialog.Builder(context)
-                        .setTitle(R.string.developerActionErrorTitle)
-                        .setMessage(R.string.developerActionErrorMessage)
-                        .setPositiveButton(android.R.string.ok, null)
-                        .show()
-                }
+        item { SectionHeader(stringResource(R.string.dangerZoneTitle)) }
+        item {
+            ActionRow(stringResource(R.string.developerResetStorage)) {
+                pending = PendingDangerAction.ResetStorage
             }
-            .show()
+        }
+        item {
+            ActionRow(stringResource(R.string.developerRemovePin)) {
+                pending = PendingDangerAction.RemovePin
+            }
+        }
+        item {
+            ActionRow(stringResource(R.string.developerRemoveBiometrics)) {
+                pending = PendingDangerAction.RemoveBiometrics
+            }
+        }
+        item { ActionRow(stringResource(R.string.settingsBack), onBack) }
     }
 
-    QuietScaffold(
-        title = stringResource(R.string.dangerZoneTitle),
-        subtitle = stringResource(R.string.dangerZoneSubtitle),
-        bottomBar = {
-            QuietBottomActions(
-                primaryLabel = stringResource(backButtonLabelRes),
-                onPrimaryClick = onBack,
-            )
-        },
-    ) {
-        Spacer(Modifier.height(20.dp))
-        io.quiet.auth.ui.components.PrimaryButton(text = stringResource(R.string.developerResetStorage), onClick = {
-            confirm(
-                titleRes = R.string.developerResetStorageTitle,
-                messageRes = R.string.developerResetStorageConfirmMessage,
-                successMessageRes = R.string.developerResetStorageSuccessMessage,
-                action = {
-                    pinRepository.clearOnboardingCompleted()
-                    val pinRemoved = pinViewModel.removePin()
-                    twoFAViewModel.replaceAll(emptyList())
-                    pinRemoved
-                },
-                navigateAfter = true,
-            )
-        })
-        Spacer(Modifier.height(8.dp))
-        io.quiet.auth.ui.components.PrimaryButton(text = stringResource(R.string.developerRemovePin), onClick = {
-            confirm(
-                titleRes = R.string.developerRemovePinTitle,
-                messageRes = R.string.developerRemovePinConfirmMessage,
-                successMessageRes = R.string.developerRemovePinSuccessMessage,
-                action = {
-                    pinRepository.clearOnboardingCompleted()
-                    pinViewModel.removePin()
-                },
-                navigateAfter = true,
-            )
-        })
-        Spacer(Modifier.height(8.dp))
-        io.quiet.auth.ui.components.PrimaryButton(text = stringResource(R.string.developerRemoveBiometrics), onClick = {
-            confirm(
-                titleRes = R.string.developerRemoveBiometricsTitle,
-                messageRes = R.string.developerRemoveBiometricsConfirmMessage,
-                successMessageRes = R.string.developerRemoveBiometricsSuccessMessage,
-                action = { pinViewModel.removeBiometrics() },
-                navigateAfter = false,
-            )
-        })
+    when (val action = pending) {
+        PendingDangerAction.ResetStorage -> ConfirmActionSheet(
+            title = stringResource(R.string.developerResetStorageTitle),
+            message = stringResource(R.string.developerResetStorageConfirmMessage),
+            confirmLabel = stringResource(R.string.developerConfirmAction),
+            dismissLabel = stringResource(R.string.cancel),
+            onConfirm = {
+                pinRepository.clearOnboardingCompleted()
+                pinViewModel.removePin()
+                twoFAViewModel.replaceAll(emptyList())
+                pending = null
+                successNavigate = true
+            },
+            onDismiss = { pending = null },
+        )
+        PendingDangerAction.RemovePin -> ConfirmActionSheet(
+            title = stringResource(R.string.developerRemovePinTitle),
+            message = stringResource(R.string.developerRemovePinConfirmMessage),
+            confirmLabel = stringResource(R.string.developerConfirmAction),
+            dismissLabel = stringResource(R.string.cancel),
+            onConfirm = {
+                pinRepository.clearOnboardingCompleted()
+                pinViewModel.removePin()
+                pending = null
+                successNavigate = true
+            },
+            onDismiss = { pending = null },
+        )
+        PendingDangerAction.RemoveBiometrics -> ConfirmActionSheet(
+            title = stringResource(R.string.developerRemoveBiometricsTitle),
+            message = stringResource(R.string.developerRemoveBiometricsConfirmMessage),
+            confirmLabel = stringResource(R.string.developerConfirmAction),
+            dismissLabel = stringResource(R.string.cancel),
+            onConfirm = {
+                pinViewModel.removeBiometrics()
+                pending = null
+            },
+            onDismiss = { pending = null },
+        )
+        null -> Unit
+    }
+
+    if (successNavigate) {
+        ConfirmActionSheet(
+            title = stringResource(R.string.developerActionSuccessTitle),
+            message = stringResource(R.string.developerResetStorageSuccessMessage),
+            confirmLabel = "OK",
+            dismissLabel = stringResource(R.string.cancel),
+            onConfirm = {
+                successNavigate = false
+                onAfterReset()
+            },
+            onDismiss = {
+                successNavigate = false
+                onAfterReset()
+            },
+        )
     }
 }

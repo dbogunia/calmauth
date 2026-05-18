@@ -6,23 +6,14 @@
     <string name="onboardingPinHint">PIN-ul este opțional. Protejează accesul local la tokenuri pe acest dispozitiv. Îl poți activa oricând din Setări.</string>
     <string name="continueWithoutPin">Continuă fără PIN</string>
     <string name="protectWithPin">Protejează aplicația cu PIN</string>
-    <string name="begin">Începe</string>
-    <string name="secureTagline">Sigur. Discret. Intenționat minimalist.</string>
 
-    <string name="twofaTitle">Conturile tale 2FA</string>
-    <string name="twofaSubtitle">Înregistrările tale de autentificare sunt încărcate în siguranță din stocarea locală criptată.</string>
-    <string name="add2fa">Adaugă 2FA</string>
     <string name="loadingAccounts">Se încarcă conturile 2FA…</string>
     <string name="emptyAccounts">Încă nu există conturi 2FA. Atinge Adaugă 2FA pentru prima înregistrare.</string>
 
     <string name="add2faTitle">Adaugă 2FA nou</string>
-    <string name="add2faSubtitle">Adaugă detaliile autentificatorului pentru a păstra toate codurile într-un singur loc sigur.</string>
     <string name="serviceName">Nume serviciu</string>
-    <string name="servicePlaceholder">ex. GitHub</string>
     <string name="account">Cont</string>
-    <string name="accountPlaceholder">ex. dominik.dev</string>
     <string name="secretKey">Cheie secretă</string>
-    <string name="secretPlaceholder">Lipește cheia de configurare</string>
     <string name="save2fa">Salvează 2FA</string>
     <string name="cancel">Anulează</string>
     <string name="missingFieldsTitle">Câmpuri lipsă</string>
@@ -30,27 +21,18 @@
 
     <string name="qrTitle">Scanează cod QR 2FA</string>
     <string name="qrSubtitle">Îndreaptă camera spre codul QR din ecranul de configurare al serviciului.</string>
-    <string name="qrPermissionRequired">Este necesară permisiunea camerei pentru a scana coduri QR 2FA.</string>
-    <string name="enableCamera">Activează camera</string>
     <string name="invalidQrTitle">QR invalid</string>
     <string name="invalidQrMessage">Acest cod QR nu este un cod de configurare 2FA valid.</string>
     <string name="qrAddedTitle">2FA adăugată</string>
     <string name="qrAddedMessage">Contul a fost adăugat din codul QR.</string>
     <string name="addManually">Adaugă manual</string>
 
-    <string name="delete">Șterge</string>
     <string name="deleteTokenTitle">Ștergi tokenul?</string>
     <string name="deleteTokenMessage">Acest token 2FA va fi eliminat permanent de pe dispozitiv.</string>
     <string name="confirmDelete">Șterge token</string>
 
-    <string name="pinSetupSubtitle">Setează un PIN din 4 cifre pentru autentificare și pentru a proteja tokenurile.</string>
-    <string name="pinSetupSubtitleOptional">Creează un PIN din 4 cifre pentru a proteja accesul la tokenuri pe acest dispozitiv.</string>
-    <string name="pinVerifyDisableSubtitle">Introdu PIN-ul pentru a dezactiva protecția PIN.</string>
     <string name="pinProtectionDisabledMessage">Protecția PIN este oprită.</string>
     <string name="pinUnlockTitle">Deblochează QuietAuth</string>
-    <string name="pinUnlockSubtitle">Introdu PIN-ul pentru a accesa tokenurile.</string>
-    <string name="pinCodePlaceholder">Introdu 4 cifre</string>
-    <string name="pinConfirmPlaceholder">Introdu din nou PIN-ul</string>
     <string name="pinInvalidTitle">PIN invalid</string>
     <string name="pinInvalidMessage">PIN-ul trebuie să aibă exact 4 cifre.</string>
     <string name="pinMismatchTitle">PIN-urile nu coincid</string>
@@ -64,11 +46,7 @@
     <string name="biometricUnlockFailedMessage">Verificarea biometrică a eșuat. Poți debloca cu PIN.</string>
     <string name="unlockingApp">Se verifică accesul…</string>
 
-    <string name="settingsCta">Setări</string>
-    <string name="settingsTitle">Setări</string>
-    <string name="settingsHubSubtitle">Securitate, copii de rezervă și acțiuni avansate pentru date locale.</string>
     <string name="settingsSecurityTitle">Securitate</string>
-    <string name="settingsSecuritySubtitle">PIN-ul și biometria opțională controlează cine poate deschide aplicația pe acest dispozitiv.</string>
     <string name="settingsBackupTitle">Copie de rezervă</string>
     <string name="settingsBackupSubtitle">Exportă și restaurează înregistrările ca fișier CSV. Dacă protecția PIN este activă, deblochează mai întâi aplicația pentru backup. Fișierul nu este criptat — păstrează-l privat.</string>
     <string name="settingsBack">Înapoi</string>
@@ -84,24 +62,17 @@
     <string name="createBackup">Exportă backup CSV</string>
     <string name="restoreBackup">Restaurează din backup CSV</string>
     <string name="backupCreatedTitle">Backup creat</string>
-    <string name="saveBackupDialogTitle">Alege unde se salvează backupul</string>
     <string name="backupErrorTitle">Backup eșuat</string>
     <string name="backupErrorMessage">Nu s-a putut crea fișierul de backup.</string>
-    <string name="backupSessionExpiredMessage">Sesiune expirată. Deblochează aplicația cu PIN și încearcă din nou.</string>
     <string name="restoreSuccessTitle">Restaurare finalizată</string>
-    <string name="restoreErrorTitle">Restaurare eșuată</string>
     <string name="restoreErrorMessage">Nu s-au putut restaura datele. Verifică dacă fișierul este un backup CSV QuietAuth.</string>
     <string name="creatingBackupProgress">Se creează backupul…</string>
     <string name="restoringBackupProgress">Se restaurează…</string>
     <string name="backupProcessingHint">După selectare, procesul continuă pe un alt ecran.</string>
 
     <string name="tokenNotFound">Token negăsit.</string>
-    <string name="backToTokens">Înapoi la tokenuri</string>
-    <string name="tokenCode">Cod</string>
-    <string name="codeExpiresIn">Expiră în</string>
 
     <string name="dangerZoneTitle">Zonă cu risc</string>
-    <string name="dangerZoneSubtitle">Zonă cu risc pentru starea locală a aplicației. Doar pentru testare.</string>
     <string name="developerResetStorage">Resetează tot stocarea aplicației</string>
     <string name="developerRemovePin">Elimină PIN</string>
     <string name="developerRemoveBiometrics">Elimină biometria</string>
@@ -113,9 +84,5 @@
     <string name="developerRemoveBiometricsConfirmMessage">Se dezactivează deblocarea biometrică pentru această aplicație.</string>
     <string name="developerConfirmAction">Confirmă</string>
     <string name="developerActionSuccessTitle">Gata</string>
-    <string name="developerActionErrorTitle">Acțiune eșuată</string>
-    <string name="developerActionErrorMessage">Acțiunea nu a putut fi finalizată. Încearcă din nou.</string>
     <string name="developerResetStorageSuccessMessage">Stocarea aplicației a fost resetată.</string>
-    <string name="developerRemovePinSuccessMessage">PIN-ul a fost eliminat.</string>
-    <string name="developerRemoveBiometricsSuccessMessage">Deblocarea biometrică a fost eliminată.</string>
 </resources>
